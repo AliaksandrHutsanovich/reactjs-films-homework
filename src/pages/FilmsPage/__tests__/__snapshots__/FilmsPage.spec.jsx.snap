@@ -12,7 +12,9 @@ exports[`<FilmsPage /> FilmsPage should be rendered properly 1`] = `
       level={3}
       text="FILMS"
     />
-    <UNDEFINED />
+    <UNDEFINED
+      onSearch={[Function]}
+    />
   </Header>
   <Layout
     className="layout"
@@ -95,9 +97,11 @@ exports[`<FilmsPage /> FilmsPage should be rendered properly 1`] = `
           className="buttonsWrapper"
         >
           <UNDEFINED
+            onClick={[Function]}
             title="Watch Now"
           />
           <UNDEFINED
+            onClick={[Function]}
             title="View Info"
             type="outlined"
           />

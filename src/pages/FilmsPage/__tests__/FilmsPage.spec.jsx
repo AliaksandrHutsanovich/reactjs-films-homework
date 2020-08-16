@@ -5,7 +5,7 @@ import FilmsPage from '../FilmsPage';
 describe('<FilmsPage />', () => {
   it('FilmsPage should be rendered properly', () => {
     const renderer = new ShallowRenderer();
-    renderer.render(<FilmsPage onClick={() => {}} />);
+    renderer.render(<FilmsPage onAction={() => {}} />);
     const result = renderer.getRenderOutput();
 
     expect(result).toMatchSnapshot();
