@@ -7,6 +7,7 @@
     "start": "nodemon --exec babel-node index.js",
     "prod": "webpack --config config/webpack/webpack.prod.babel.js",
     "lint": "eslint \"src/**/*.jsx\" \"src/**/*.js\"",
+    "sb": "start-storybook -p 6006",
     "test": "npm run test:unit",
     "test:unit": "./node_modules/.bin/jest -c ./config/jest/jest.config.unit.js --detectOpenHandles --forceExit --maxWorkers=10"
   },
@@ -21,8 +22,11 @@
   },
   "homepage": "https://github.com/AliaksandrHutsanovich/reactjs-films-homework#readme",
   "dependencies": {
+    "@ant-design/icons": "^4.2.1",
     "antd": "^4.4.3",
+    "clsx": "^1.1.1",
     "express": "^4.17.1",
+    "framer-motion": "^2.3.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -38,6 +42,8 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "@types/jest": "^25.1.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",

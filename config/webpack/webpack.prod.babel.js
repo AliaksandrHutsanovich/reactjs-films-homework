@@ -36,13 +36,7 @@ module.exports = {
           common.module.rules[1].use[2],
         ],
       },
-      {
-        test: /\.(png|jpe?g|gif)$/,
-        loader: 'file-loader',
-        options: {
-          name: 'assets/[name].[ext]',
-        },
-      },
+      common.module.rules[2],
     ],
   },
 };

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> horizontalList should be rendered properly 1`] = `
+<List
+  className="list"
+  dataSource={
+    Array [
+      Object {
+        "id": 1,
+        "text": "Alex",
+      },
+      Object {
+        "id": 2,
+        "text": "Valdis",
+      },
+      Object {
+        "id": 3,
+        "text": "Gustav",
+      },
+      Object {
+        "id": 4,
+        "text": "Vlad",
+      },
+    ]
+  }
+  grid={
+    Object {
+      "column": 4,
+      "gutter": 12,
+    }
+  }
+  size="small"
+/>
+`;
+
+exports[`<List /> list item should be rendered properly 1`] = `
+<Item
+  className="listItem"
+>
+  <UNDEFINED
+    size={12}
+    type="white"
+  >
+    retop
+  </UNDEFINED>
+</Item>
+`;
+
+exports[`<List /> verticalList should be rendered properly 1`] = `
+<List
+  className=""
+  dataSource={
+    Array [
+      Object {
+        "id": 1,
+        "text": "Alex",
+      },
+      Object {
+        "id": 2,
+        "text": "Valdis",
+      },
+      Object {
+        "id": 3,
+        "text": "Gustav",
+      },
+      Object {
+        "id": 4,
+        "text": "Vlad",
+      },
+    ]
+  }
+  size="small"
+/>
+`;

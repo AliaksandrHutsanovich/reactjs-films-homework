@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> loadingExample should be rendered properly 1`] = `
+<div
+  className="wrapper"
+>
+  <ul
+    className="wrapper__list"
+  >
+    <ForwardRef(MotionComponent)
+      animate={
+        Object {
+          "scale": Array [
+            1,
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+            1,
+          ],
+        }
+      }
+      className="wrapper__list_item"
+      transition={
+        Object {
+          "duration": 2,
+          "ease": "easeInOut",
+          "loop": Infinity,
+          "times": Array [
+            0,
+            0.143,
+            0.286,
+            0.429,
+            0.572,
+            0.715,
+            0.858,
+            1,
+          ],
+        }
+      }
+    />
+    <ForwardRef(MotionComponent)
+      animate={
+        Object {
+          "scale": Array [
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+          ],
+        }
+      }
+      className="wrapper__list_item"
+      transition={
+        Object {
+          "duration": 2,
+          "ease": "easeInOut",
+          "loop": Infinity,
+          "times": Array [
+            0,
+            0.143,
+            0.286,
+            0.429,
+            0.572,
+            0.715,
+            0.858,
+            1,
+          ],
+        }
+      }
+    />
+    <ForwardRef(MotionComponent)
+      animate={
+        Object {
+          "scale": Array [
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            1,
+          ],
+        }
+      }
+      className="wrapper__list_item"
+      transition={
+        Object {
+          "duration": 2,
+          "ease": "easeInOut",
+          "loop": Infinity,
+          "times": Array [
+            0,
+            0.143,
+            0.286,
+            0.429,
+            0.572,
+            0.715,
+            0.858,
+            1,
+          ],
+        }
+      }
+    />
+  </ul>
+  <UNDEFINED
+    type="normal"
+  >
+    LOADING
+  </UNDEFINED>
+</div>
+`;

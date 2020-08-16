@@ -1,0 +1,16 @@
+.listItem {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-bottom: 2px !important;
+}
+
+.list > div > div > div > :nth-child(n) {
+  width: auto !important;
+  max-width: none !important;
+}
+
+@for $var from 1 to 4 {
+  .itemMarginLeft_#{$var * 5} > div > div > div > :nth-child(n + 2) {
+    margin-left: #{$var * 5}px;
+  }
+}

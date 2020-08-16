@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchInput /> search should be rendered properly 1`] = `
+<ForwardRef
+  allowClear={true}
+  className="input"
+  enterButton={true}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onSearch={[Function]}
+/>
+`;

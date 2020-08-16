@@ -1,0 +1,13 @@
+$cardWidth: 300;
+$imageWidth: 450;
+
+.card {
+  width: #{$cardWidth}px;
+  height: 320px;
+  overflow: hidden;
+}
+
+.image {
+  width: #{$imageWidth}px;
+  margin: 0 -#{($imageWidth/2 - $cardWidth/2)}px;
+}

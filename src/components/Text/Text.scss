@@ -1,0 +1,49 @@
+%font-shared {
+  font-family: HelveticaNeue;
+}
+
+.secondary {
+  @extend %font-shared;
+  color: rgb(71, 195, 240) !important;
+}
+
+.white {
+  @extend %font-shared;
+  color: white;
+}
+
+@mixin fillBackground($color) {
+  display: block;
+  color: white;
+  margin: 0;
+  line-height: 12px;
+  padding: 4px 8px;
+  @extend %font-shared;
+  background-color: $color;
+}
+
+.withShadow {
+  @include fillBackground( rgba(81, 79, 60, 0.5));
+  padding: 10px 13px;
+  line-height: 19px;
+}
+
+.whiteWithBackground {
+  @include fillBackground( rgb(179, 179, 179));
+  border-radius: 2px;
+}
+
+.secondaryWithBackground {
+  @extend .whiteWithBackground;
+  @extend .secondary;
+}
+
+@for $var from 0 to 11 {
+  .size_#{10 + $var * 2} {
+    font-size: #{10 + $var * 2}px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}

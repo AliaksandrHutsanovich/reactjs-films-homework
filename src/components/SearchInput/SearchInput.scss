@@ -1,0 +1,33 @@
+.input {
+  width: 300px;
+  background-color: transparent;
+  border-radius: 3px;
+
+  > input {
+    background-color: transparent;
+  }
+
+  > span > span:last-child {
+    background-color: transparent;
+
+    > button {
+      background-color: transparent;
+      border: 1px solid white;
+      width: 32px;
+      border-radius: 0 3px 3px 0;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.focused {
+  background-color: rgb(93, 155, 212);
+
+  > span > span:last-child > button {
+    background-color: rgb(93, 155, 212);
+    border: 1px solid rgb(93, 155, 212);
+  }
+}

@@ -1,0 +1,29 @@
+@font-face{
+  font-family: 'HelveticaNeue';
+  src: url('../../assets/fonts/HelveticaNeue.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCondensedBlack';
+  src: url('../../assets/fonts/HelveticaNeueCondensedBlack.ttf') format('truetype');
+}
+
+.header {
+  color: white !important;
+}
+
+.bold {
+  font-weight: 600 !important;
+}
+
+.normal {
+  font-weight: 100 !important;
+}
+
+.helveticaNeue {
+  font-family: HelveticaNeue;
+}
+
+.arial {
+  font-family: Arial;
+}

@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilmsPage /> FilmsPage should be rendered properly 1`] = `
+<Layout
+  className="wrapper"
+>
+  <Header
+    className="header"
+  >
+    <UNDEFINED
+      fontFamily="arial"
+      level={3}
+      text="FILMS"
+    />
+    <UNDEFINED />
+  </Header>
+  <Layout
+    className="layout"
+  >
+    <ForwardRef>
+      <ForwardRef
+        className="rightCol"
+        span={12}
+      >
+        <UNDEFINED
+          level={2}
+          text="THE JUNGLE BOOK"
+        />
+        <ForwardRef
+          className="infoWrapper"
+        >
+          <ForwardRef
+            className="listWrapper"
+          >
+            <UNDEFINED
+              dataSource={
+                Array [
+                  Object {
+                    "id": 1,
+                    "text": "Adventure",
+                  },
+                  Object {
+                    "id": 2,
+                    "text": "Drame",
+                  },
+                  Object {
+                    "id": 3,
+                    "text": "Family",
+                  },
+                  Object {
+                    "id": 4,
+                    "text": "Fantasy",
+                  },
+                ]
+              }
+              grid={
+                Object {
+                  "column": 4,
+                }
+              }
+              itemAutoWidth={true}
+              itemMarginLeft={15}
+              size="small"
+            />
+          </ForwardRef>
+          <UNDEFINED
+            type="vertical"
+          />
+          <UNDEFINED
+            size={12}
+            type="white"
+          >
+            1h 46m
+          </UNDEFINED>
+        </ForwardRef>
+        <UNDEFINED
+          rating="4.6"
+        />
+      </ForwardRef>
+      <ForwardRef
+        className="leftCol"
+        span={12}
+      >
+        <Layout
+          className="textWrapper"
+        >
+          <UNDEFINED
+            size={12}
+            type="with_shadow"
+          >
+            There are growing dangers in the wizarding world of 1926 New York. Something misterious is leaving a path of destructions in the streets, threatening to expose the wizarding.
+          </UNDEFINED>
+        </Layout>
+        <ForwardRef
+          className="buttonsWrapper"
+        >
+          <UNDEFINED
+            title="Watch Now"
+          />
+          <UNDEFINED
+            title="View Info"
+            type="outlined"
+          />
+        </ForwardRef>
+      </ForwardRef>
+    </ForwardRef>
+  </Layout>
+</Layout>
+`;

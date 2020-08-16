@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> tabsExample should be rendered properly 1`] = `
+<Tabs
+  defaultActiveKey="1"
+  tabBarExtraContent={
+    <p>
+      This is extra content
+    </p>
+  }
+  tabBarGutter={30}
+>
+  <TabPane
+    tab="Tab 1"
+  >
+    <p>
+      This is content of tab 1
+    </p>
+  </TabPane>
+  <TabPane
+    tab="Tab 2"
+  >
+    <p>
+      This is content of tab 2
+    </p>
+  </TabPane>
+  <TabPane
+    tab="Tab 3"
+  >
+    <p>
+      This is content of tab 3
+    </p>
+  </TabPane>
+</Tabs>
+`;

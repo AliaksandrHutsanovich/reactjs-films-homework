@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> danger should be rendered properly 1`] = `
+<Text
+  className="size_undefined"
+  type="danger"
+>
+  This is normal text
+</Text>
+`;
+
+exports[`<Text /> normal should be rendered properly 1`] = `
+<Text
+  className="size_undefined"
+  type=""
+>
+  This is normal text
+</Text>
+`;
+
+exports[`<Text /> secondary should be rendered properly 1`] = `
+<Text
+  className="secondary size_undefined"
+  type=""
+>
+  This is text with secondary color
+</Text>
+`;
+
+exports[`<Text /> white should be rendered properly 1`] = `
+<Text
+  className="white size_undefined"
+  type=""
+>
+  This is white text
+</Text>
+`;
+
+exports[`<Text /> withBackground should be rendered properly 1`] = `
+<Text
+  className="whiteWithBackground size_undefined"
+  type=""
+>
+  This is text with background
+</Text>
+`;
+
+exports[`<Text /> withShadowBackground should be rendered properly 1`] = `
+<Text
+  className="withShadow size_undefined"
+  type=""
+>
+  This is text with shadow background
+</Text>
+`;

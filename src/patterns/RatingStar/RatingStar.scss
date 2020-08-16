@@ -1,0 +1,25 @@
+.patternsWrapper {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.backPattern {
+  position: relative;
+  width: 120px;
+}
+
+.frontPatternWrapper {
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+}
+
+.frontPattern {
+  width: 120px;
+}
+
+.item {
+  padding: 0 0;
+  margin-top: -10px;
+  margin-bottom: 0px !important;
+}

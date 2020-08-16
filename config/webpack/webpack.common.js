@@ -38,7 +38,7 @@ module.exports = {
           },
         ],
       }, {
-        test: /\.s[ac]ss$/,
+        test: /\.(s[ac]ss|css)$/,
         use: [
           { loader: 'style-loader' },
           {
@@ -52,6 +52,12 @@ module.exports = {
           },
           { loader: 'sass-loader' },
         ],
+      }, {
+        test: /\.(png|jpe?g|gif|ttf)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'assets/[name].[ext]',
+        },
       },
     ],
   },

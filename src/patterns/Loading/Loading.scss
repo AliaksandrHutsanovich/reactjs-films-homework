@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 40px;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__list_item {
+    background-color: rgb(10, 174, 228);
+    border-radius: 4px;
+    width: 7px;
+    height: 7px;
+  }
+
+  &__text {
+    text-align: center;
+    color: white;
+    font: normal 15px HeleveticaNeue;
+  }
+}

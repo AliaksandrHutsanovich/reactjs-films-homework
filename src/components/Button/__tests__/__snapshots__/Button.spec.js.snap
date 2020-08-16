@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> filled should be rendered properly 1`] = `
+<ForwardRef(InternalButton)
+  block={false}
+  className=""
+  ghost={false}
+  htmlType="button"
+  loading={false}
+  onClick={[Function]}
+>
+  Click me
+</ForwardRef(InternalButton)>
+`;
+
+exports[`<Button /> outlined should be rendered properly 1`] = `
+<ForwardRef(InternalButton)
+  block={false}
+  className="outlined"
+  ghost={false}
+  htmlType="button"
+  loading={false}
+  onClick={[Function]}
+  type="default"
+>
+  Click me
+</ForwardRef(InternalButton)>
+`;

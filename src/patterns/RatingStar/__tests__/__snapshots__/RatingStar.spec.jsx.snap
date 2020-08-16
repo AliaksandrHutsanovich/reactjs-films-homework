@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RatingStar /> ratingStarExample should be rendered properly 1`] = `
+<ForwardRef
+  gutter={10}
+  justify="start"
+>
+  <ForwardRef
+    className="patternsWrapper"
+  >
+    <div
+      className="backPattern"
+    >
+      <UNDEFINED
+        dataSource={
+          Array [
+            Object {
+              "id": 0,
+              "star": <UNDEFINED
+                size={26}
+                type="white"
+              >
+                ★
+              </UNDEFINED>,
+            },
+            Object {
+              "id": 1,
+              "star": <UNDEFINED
+                size={26}
+                type="white"
+              >
+                ★
+              </UNDEFINED>,
+            },
+            Object {
+              "id": 2,
+              "star": <UNDEFINED
+                size={26}
+                type="white"
+              >
+                ★
+              </UNDEFINED>,
+            },
+            Object {
+              "id": 3,
+              "star": <UNDEFINED
+                size={26}
+                type="white"
+              >
+                ★
+              </UNDEFINED>,
+            },
+            Object {
+              "id": 4,
+              "star": <UNDEFINED
+                size={26}
+                type="white"
+              >
+                ★
+              </UNDEFINED>,
+            },
+          ]
+        }
+        grid={
+          Object {
+            "column": 5,
+            "gutter": 6,
+          }
+        }
+        renderItem={[Function]}
+      />
+    </div>
+    <div
+      className="frontPatternWrapper"
+      style={
+        Object {
+          "width": "92%",
+        }
+      }
+    >
+      <div
+        className="frontPattern"
+      >
+        <UNDEFINED
+          dataSource={
+            Array [
+              Object {
+                "id": 0,
+                "star": <UNDEFINED
+                  size={26}
+                  type="secondary"
+                >
+                  ★
+                </UNDEFINED>,
+              },
+              Object {
+                "id": 1,
+                "star": <UNDEFINED
+                  size={26}
+                  type="secondary"
+                >
+                  ★
+                </UNDEFINED>,
+              },
+              Object {
+                "id": 2,
+                "star": <UNDEFINED
+                  size={26}
+                  type="secondary"
+                >
+                  ★
+                </UNDEFINED>,
+              },
+              Object {
+                "id": 3,
+                "star": <UNDEFINED
+                  size={26}
+                  type="secondary"
+                >
+                  ★
+                </UNDEFINED>,
+              },
+              Object {
+                "id": 4,
+                "star": <UNDEFINED
+                  size={26}
+                  type="secondary"
+                >
+                  ★
+                </UNDEFINED>,
+              },
+            ]
+          }
+          grid={
+            Object {
+              "column": 5,
+              "gutter": 6,
+            }
+          }
+          renderItem={[Function]}
+        />
+      </div>
+    </div>
+  </ForwardRef>
+  <ForwardRef>
+    <UNDEFINED
+      size={12}
+      type="white_with_background"
+    >
+      4.6
+    </UNDEFINED>
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`<RatingStar /> star shold be rendered properly 1`] = `
+<Item
+  className="item"
+>
+  &#9733;
+</Item>
+`;

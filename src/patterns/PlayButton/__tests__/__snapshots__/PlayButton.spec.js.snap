@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlayButton /> playButton should be rendered properly 1`] = `
+<div
+  className="wrapper"
+>
+  <ForwardRef(PlayCircleFilled)
+    className="wrapper__icon"
+    onClick={[Function]}
+  />
+  <UNDEFINED
+    size={16}
+    type="white"
+  >
+    Watch Now
+  </UNDEFINED>
+</div>
+`;

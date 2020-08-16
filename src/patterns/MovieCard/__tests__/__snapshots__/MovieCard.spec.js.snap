@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieCard /> cardExample should be rendered properly 1`] = `
+<Card
+  className="card"
+  cover={
+    <img
+      alt="cardImg"
+      className="image"
+      src="test-file-stub"
+    />
+  }
+>
+  <Meta
+    description={
+      <UNDEFINED
+        genres={
+          Array [
+            "Action",
+            "Adventure",
+            "Fantasy",
+          ]
+        }
+        rating="4.7"
+        ratingFontType="secondary_with_background"
+        title="ASSASIN'S CREED"
+      />
+    }
+  />
+</Card>
+`;

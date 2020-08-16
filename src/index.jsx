@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Signature from './components';
+// import Signature from './components';
+import FilmsPage from './pages/FilmsPage';
 
 ReactDOM.render(
-  <Signature name="Alex" />,
+  <FilmsPage onAction={() => {}} />,
   document.getElementById('container'),
 );
