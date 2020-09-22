@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Text /> bordered should be rendered properly 1`] = `
+<Text
+  className="bordered size_undefined"
+  type=""
+>
+  It is bordered text
+</Text>
+`;
+
 exports[`<Text /> danger should be rendered properly 1`] = `
 <Text
   className="size_undefined"

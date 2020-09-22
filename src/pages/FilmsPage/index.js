@@ -1,1 +1,1 @@
-export { default } from './FilmsPage';
+export { default } from './FilmsPage';  //eslint-disable-line

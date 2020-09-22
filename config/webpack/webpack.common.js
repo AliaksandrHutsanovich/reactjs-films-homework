@@ -53,7 +53,7 @@ module.exports = {
           { loader: 'sass-loader' },
         ],
       }, {
-        test: /\.(png|jpe?g|gif|ttf)$/,
+        test: /\.(png|jpe?g|gif|ttf|svg)$/,
         loader: 'file-loader',
         options: {
           name: 'assets/[name].[ext]',

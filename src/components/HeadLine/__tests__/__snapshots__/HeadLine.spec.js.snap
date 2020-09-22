@@ -1,8 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<HeadLine /> blueHeaderNormalH3 should be rendered properly 1`] = `
+<Title
+  className="blueHeader alignCenter undefined arial"
+  level={3}
+>
+  Header h3
+</Title>
+`;
+
 exports[`<HeadLine /> condensedHeaderNormalH3 should be rendered properly 1`] = `
 <Title
-  className="header undefined arial"
+  className="undefined arial"
   level={3}
 >
   Header h3
@@ -11,7 +20,7 @@ exports[`<HeadLine /> condensedHeaderNormalH3 should be rendered properly 1`] = 
 
 exports[`<HeadLine /> headerBoldH1 should be rendered properly 1`] = `
 <Title
-  className="header bold undefined"
+  className="bold undefined"
 >
   Header h1
 </Title>
@@ -19,7 +28,7 @@ exports[`<HeadLine /> headerBoldH1 should be rendered properly 1`] = `
 
 exports[`<HeadLine /> headerNormalH2 should be rendered properly 1`] = `
 <Title
-  className="header undefined undefined"
+  className="undefined undefined"
   level={2}
 >
   Header h2
@@ -28,7 +37,7 @@ exports[`<HeadLine /> headerNormalH2 should be rendered properly 1`] = `
 
 exports[`<HeadLine /> headerNormalH3 should be rendered properly 1`] = `
 <Title
-  className="header undefined undefined"
+  className="undefined undefined"
   level={3}
 >
   Header h3

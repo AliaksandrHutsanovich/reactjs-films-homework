@@ -1,3 +1,8 @@
+@font-face{
+  font-family: 'HelveticaNeue';
+  src: url('../../assets/fonts/HelveticaNeue.ttf') format('truetype');
+}
+
 %font-shared {
   font-family: HelveticaNeue;
 }
@@ -46,4 +51,20 @@
 
 .bold {
   font-weight: bold;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bordered {
+  @extend .secondary;
+  border: {
+    radius: 6px;
+    width: 1px;
+    style: solid;
+  }
+  padding: 3px 7px;
 }

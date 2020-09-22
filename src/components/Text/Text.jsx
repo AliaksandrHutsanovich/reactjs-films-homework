@@ -15,6 +15,7 @@ const classNameTypes = {
   white_with_background: styles.whiteWithBackground,
   secondary_with_background: styles.secondaryWithBackground,
   secondary: styles.secondary,
+  bordered: styles.bordered,
 };
 
 const getSizeClass = (size) => styles[`size_${size}`];
@@ -25,6 +26,7 @@ const Text = ({
   type,
   children,
   size,
+  textOverflow,
 }) => {
   const className = classNameTypes[type];
 
@@ -36,7 +38,12 @@ const Text = ({
 
   return (
     <AntdText
-      className={clsx(className, fontSizeClass, { [styles.bold]: strong })}
+      className={clsx(
+        className,
+        fontSizeClass,
+        { [styles.bold]: strong },
+        { [styles.ellipsis]: textOverflow },
+      )}
       underline={underline}
       strong={strong}
       type={antdTextType}
@@ -57,12 +64,14 @@ Text.propTypes = {
   ]).isRequired,
   children: PropTypes.string.isRequired,
   size: PropTypes.number,
+  textOverflow: PropTypes.bool,
 };
 
 Text.defaultProps = {
   underline: false,
   strong: false,
   size: 14,
+  textOverflow: false,
 };
 
 export default memo(Text);

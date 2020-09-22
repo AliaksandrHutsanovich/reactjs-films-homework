@@ -1,0 +1,7 @@
+.tabs > div > div {
+  flex: none !important;
+
+  > div > div {
+    padding: 0px;
+  }
+}

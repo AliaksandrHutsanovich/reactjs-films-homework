@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieCard /> card should be rendered properly 1`] = `
+<Card
+  className="card hoverable"
+  cover={
+    <div
+      className="imageWrapper"
+    >
+      <UNDEFINED
+        alt="cardImg"
+        className="image"
+        imgUrl=""
+        preload="test-file-stub"
+        spinClassName="imageSpin"
+      />
+      <div
+        className="hoverableContentWrapper"
+      >
+        <p>
+          This is hoverable content
+        </p>
+      </div>
+    </div>
+  }
+>
+  <Meta
+    description={
+      <UNDEFINED
+        genres={
+          Array [
+            "Action",
+            "Adventure",
+            "Fantasy",
+          ]
+        }
+        rating="4.7"
+        ratingFontType="bordered"
+        title="ASSASIN'S CREED"
+      />
+    }
+  />
+  <div
+    className="coveringContentWrapper"
+  >
+    <div />
+  </div>
+</Card>
+`;
+
+exports[`<MovieCard /> card with covering content should be rendered properly 1`] = `
+<Card
+  className="card"
+  cover={
+    <div
+      className="imageWrapper"
+    >
+      <UNDEFINED
+        alt="cardImg"
+        className="image"
+        imgUrl="test-file-stub"
+        preload="test-file-stub"
+        spinClassName="imageSpin"
+      />
+      <div
+        className="hoverableContentWrapper"
+      >
+        <p>
+          This is hoverable content
+        </p>
+      </div>
+    </div>
+  }
+>
+  <Meta
+    description={
+      <UNDEFINED
+        genres={
+          Array [
+            "Action",
+            "Adventure",
+            "Fantasy",
+          ]
+        }
+        rating="4.7"
+        ratingFontType="bordered"
+        title="ASSASIN'S CREED"
+      />
+    }
+  />
+  <div
+    className="coveringContentWrapper showCover"
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "rgba(0, 0, 0, 0.7)",
+          "height": "220px",
+          "width": "220px",
+        }
+      }
+    >
+      <h2
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        This is covering content
+      </h2>
+    </div>
+  </div>
+</Card>
+`;

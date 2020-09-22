@@ -42,3 +42,10 @@ export const horizontalList = () => (
     itemAutoWidth
   />
 );
+
+export const emptyList = () => (
+  <List
+    dataSource={[]}
+    size="large"
+  />
+);

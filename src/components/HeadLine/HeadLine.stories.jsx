@@ -36,3 +36,7 @@ export const headerNormalH3 = () => (
 export const condensedHeaderNormalH3 = () => (
   <HeadLine text="Header h3" level={3} fontFamily="arial" />
 );
+
+export const blueHeaderNormalH3 = () => (
+  <HeadLine text="Header h3" level={3} fontFamily="arial" type="blue" align="center" />
+);

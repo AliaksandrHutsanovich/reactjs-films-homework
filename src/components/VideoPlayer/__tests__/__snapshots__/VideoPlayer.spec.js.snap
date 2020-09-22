@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VideoPlayer /> videoPlayerExample should be rendered properly 1`] = `
+<div
+  style={
+    Object {
+      "height": "300px",
+      "width": "400px",
+    }
+  }
+>
+  <iframe
+    allowFullScreen={true}
+    frameBorder="0"
+    height="100%"
+    src="//www.youtube.com/embed/7Y6-w5Psupw?autoplay=1&origin=https%3A%2F%2Fwww.themoviedb.org&hl=en&modestbranding=1&fs=1&autohide=1"
+    style={
+      Object {
+        "backgroundColor": "#000",
+      }
+    }
+    title="frame"
+    type="text/html"
+    width="100%"
+  />
+</div>
+`;

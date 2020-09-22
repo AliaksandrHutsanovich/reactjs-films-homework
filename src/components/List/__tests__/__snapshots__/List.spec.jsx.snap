@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<List /> emptyList should be rendered properly 1`] = `
+<List
+  className=""
+  dataSource={Array []}
+  size="large"
+/>
+`;
+
 exports[`<List /> horizontalList should be rendered properly 1`] = `
 <List
   className="list"

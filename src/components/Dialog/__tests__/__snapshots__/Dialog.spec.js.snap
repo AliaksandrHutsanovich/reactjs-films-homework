@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dialog /> dialogExample should be rendered properly 1`] = `
+<Modal
+  confirmLoading={false}
+  footer={null}
+  maskTransitionName="fade"
+  okType="primary"
+  onCancel={[Function]}
+  title="Dialog example"
+  transitionName="zoom"
+  visible={true}
+  width="fit-content"
+>
+  <h1>
+    This is just a dialog example
+  </h1>
+</Modal>
+`;

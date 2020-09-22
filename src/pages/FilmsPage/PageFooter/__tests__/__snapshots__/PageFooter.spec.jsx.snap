@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageFooter /> should render properly 1`] = `
+<Footer
+  className="footer"
+>
+  <UNDEFINED
+    align="center"
+    fontFamily="arial"
+    level={3}
+    text="FILMS"
+    type="blue"
+  />
+  <UNDEFINED
+    type="normal"
+  >
+    Copyright © 2018 FILMS Sanderas
+  </UNDEFINED>
+</Footer>
+`;

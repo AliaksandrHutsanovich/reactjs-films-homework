@@ -1,0 +1,36 @@
+@import '../../styles/global';
+
+.card {
+  width: #{$cardWidth}px;
+  height: #{$cardHeight}px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px 4px 0 0;
+
+  &__content {
+    background-color: transparent;
+    &>:nth-child(n + 2) {
+      margin: 12px 0;
+    }
+  }
+
+  &__textWrapper {
+    background-color: transparent !important;
+    max-height: 105px;
+    overflow: auto;
+  }
+
+  button {
+    width: fit-content;
+  }
+}
+
+.icon {
+  width: fit-content;
+  color: white;
+  transition: color 1s ease-in;
+  transition:  background-color 1s linear;
+  &:hover {
+    color: yellow;
+    background-color: red;
+  }
+}

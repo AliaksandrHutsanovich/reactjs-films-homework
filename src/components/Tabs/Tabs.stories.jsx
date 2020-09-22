@@ -36,6 +36,7 @@ export const tabsExample = () => (
     tabsConfig={tabsConfig}
     defaultActiveKey="1"
     tabBarExtraContent={<p>This is extra content</p>}
-    tabBarGutter={30}
+    tabBarGutter={10}
+    tabPosition="top"
   />
 );

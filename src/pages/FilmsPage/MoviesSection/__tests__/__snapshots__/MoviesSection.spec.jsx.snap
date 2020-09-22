@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MoviesSection /> renderComingSoon should be rendered properly 1`] = `
+<div>
+  This is a fake container
+</div>
+`;
+
+exports[`<MoviesSection /> renderTopRated should be rendered properly 1`] = `
+<div>
+  This is a fake container
+</div>
+`;
+
+exports[`<MoviesSection /> renderTrending should be rendered properly 1`] = `
+<div>
+  This is a fake container
+</div>
+`;
+
+exports[`<MoviesSection /> should be rendered properly 1`] = `
+<Layout
+  className="wrapper"
+>
+  <UNDEFINED
+    defaultActiveKey="1"
+    tabBarExtraContent={<UNDEFINED />}
+    tabBarGutter={15}
+    tabPosition="top"
+    tabsConfig={
+      Array [
+        Object {
+          "key": "1",
+          "renderItemChildren": [Function],
+          "tabTitle": "Trending",
+        },
+        Object {
+          "key": "2",
+          "renderItemChildren": [Function],
+          "tabTitle": "Top Rated",
+        },
+        Object {
+          "key": "3",
+          "renderItemChildren": [Function],
+          "tabTitle": "Coming Soon",
+        },
+      ]
+    }
+  />
+</Layout>
+`;

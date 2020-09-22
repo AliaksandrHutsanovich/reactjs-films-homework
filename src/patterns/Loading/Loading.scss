@@ -1,3 +1,8 @@
+@font-face{
+  font-family: 'HelveticaNeue';
+  src: url('../../assets/fonts/HelveticaNeue.ttf') format('truetype');
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -20,6 +25,6 @@
   &__text {
     text-align: center;
     color: white;
-    font: normal 15px HeleveticaNeue;
+    font: normal 15px HelveticaNeue;
   }
 }

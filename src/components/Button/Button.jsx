@@ -6,7 +6,7 @@ import '!style-loader!css-loader!sass-loader!antd/dist/antd.css'; //eslint-disab
 
 import styles from './Button.scss';
 
-const antdButtonTypeConfig = {
+const ANTD_BUTTON_TYPE_CONFIG = {
   outlined: 'default',
   filled: 'primary',
 };
@@ -19,7 +19,7 @@ const Button = ({
   title,
 }) => {
   const className = useMemo(() => (type === 'outlined' ? styles.outlined : ''), [type]);
-  const antdType = antdButtonTypeConfig[type];
+  const antdType = ANTD_BUTTON_TYPE_CONFIG[type];
   return (
     <AntdButton
       onClick={onClick}

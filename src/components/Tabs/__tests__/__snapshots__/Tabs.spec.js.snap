@@ -2,13 +2,14 @@
 
 exports[`<Tabs /> tabsExample should be rendered properly 1`] = `
 <Tabs
+  className="tabs"
   defaultActiveKey="1"
   tabBarExtraContent={
     <p>
       This is extra content
     </p>
   }
-  tabBarGutter={30}
+  tabBarGutter={10}
 >
   <TabPane
     tab="Tab 1"

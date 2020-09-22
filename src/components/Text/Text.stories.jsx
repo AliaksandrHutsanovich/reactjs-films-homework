@@ -47,6 +47,15 @@ withBackground.story = {
   decorators: [backgroundDecorator],
 };
 
+export const bordered = () => (
+  <Text type="bordered">
+    It is bordered text
+  </Text>
+);
+bordered.story = {
+  decorators: [backgroundDecorator],
+};
+
 export const secondary = () => (
   <Text type="secondary">
     This is text with secondary color

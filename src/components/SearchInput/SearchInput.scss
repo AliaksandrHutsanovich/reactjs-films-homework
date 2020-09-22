@@ -5,6 +5,7 @@
 
   > input {
     background-color: transparent;
+    color: white;
   }
 
   > span > span:last-child {
@@ -25,6 +26,7 @@
 
 .focused {
   background-color: rgb(93, 155, 212);
+  color: white;
 
   > span > span:last-child > button {
     background-color: rgb(93, 155, 212);

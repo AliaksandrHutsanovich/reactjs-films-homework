@@ -1,0 +1,28 @@
+@import '../../styles/global';
+
+$imageWidth: 530;
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hoverableContentWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coveringContentWrapper {
+  background-size: #{$imageWidth}px #{$cardHeight}px !important;
+  background-position: -#{($imageWidth/2 - $cardWidth/2)}px 0 !important;
+}
+
+.loadingWrapper {
+  width: 100%;
+}

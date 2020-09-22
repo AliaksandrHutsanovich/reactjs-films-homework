@@ -1,13 +1,68 @@
-$cardWidth: 300;
-$imageWidth: 450;
+@import '../../styles/global';
+
+$imageWidth: 390;
+$imageHeight: 220;
 
 .card {
   width: #{$cardWidth}px;
-  height: 320px;
+  position: relative;
+  height: #{$cardHeight}px;
   overflow: hidden;
+  margin: 10px 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: #{$imageHeight}px;
+  position: relative;
 }
 
 .image {
   width: #{$imageWidth}px;
   margin: 0 -#{($imageWidth/2 - $cardWidth/2)}px;
+  height: 100%;
+}
+
+.imageSpin {
+  top: #{$imageHeight/3}px;
+  left: #{$cardWidth/3}px
+}
+
+.hoverableContentWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: #{$cardWidth}px;
+  height: #{$imageHeight}px;
+  background-color: rgba(0, 0, 0, 0);
+  display: none;
+}
+
+.hoverable {
+  cursor: pointer;
+
+  &:hover {
+    .hoverableContentWrapper {
+      display: block;
+      transition: background-color 1s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+.coveringContentWrapper {
+  position: absolute;
+  top: -#{$cardHeight + 20}px;
+  left: 0;
+  width: #{$cardWidth}px;
+  height: #{$cardHeight}px;
+  transition: top 1s ease-in;
+}
+
+.showCover {
+  top: 0px;
 }

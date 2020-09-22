@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Tabs as AntdTabs } from 'antd';
 
 import '!style-loader!css-loader!sass-loader!antd/dist/antd.css'; //eslint-disable-line
+import styles from './Tabs.scss';
 
 const { TabPane } = AntdTabs;
 
@@ -41,6 +42,7 @@ const Tabs = ({
       tabBarGutter={tabBarGutter}
       tabBarStyle={tabBarStyle}
       onTabClick={onTabClick}
+      className={styles.tabs}
     >
       {tabPanes}
     </AntdTabs>

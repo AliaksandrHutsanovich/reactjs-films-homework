@@ -12,6 +12,9 @@ export default {
           width: '400px',
           height: '300px',
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
         }}
       >
         {story()}

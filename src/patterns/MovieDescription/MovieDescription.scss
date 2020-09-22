@@ -1,18 +1,3 @@
-.description {
-  &__title {
-    font: 15px HelveticaNeueBold;
-  }
-
-  &__text {
-    font: 10px HelveticaNeueMedium;
-    color: blue;
-  }
-
-  &__rating {
-    font: 10px HelveticaNeueMedium;
-    padding: 5px;
-    color: blue;
-    background-color: grey;
-    border-radius: 1px;
-  }
+.hidden {
+  overflow: hidden;
 }

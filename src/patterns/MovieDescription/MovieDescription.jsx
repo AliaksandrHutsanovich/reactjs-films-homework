@@ -6,6 +6,8 @@ import '!style-loader!css-loader!sass-loader!antd/dist/antd.css'; //eslint-disab
 
 import { Text } from '../../components';
 
+import styles from './MovieDescription.scss';
+
 const MovieDescription = ({
   title,
   genres,
@@ -14,26 +16,26 @@ const MovieDescription = ({
   ratingFontType,
 }) => {
   const genresList = useMemo(
-    () => (
+    () => (genres.length ? (
       genres.reduce(
         (acc, genre) => (`${acc}, ${genre}`),
       )
-    ),
+    ) : ''),
     [genres], // additional memoization is possible
   );
 
   return (
     <Row justify="space-between">
-      <Col span={18}>
-        <Row>
-          <Text size={18} type={titleFontType} strong>{title}</Text>
+      <Col span={20}>
+        <Row className={styles.hidden}>
+          <Text size={14} type={titleFontType} textOverflow strong>{title}</Text>
         </Row>
         <Row>
-          <Text type="secondary">{genresList}</Text>
+          <Text type="secondary" size={12}>{genresList}</Text>
         </Row>
       </Col>
       <Col>
-        <Text size={16} type={ratingFontType}>{rating}</Text>
+        <Text size={12} type={ratingFontType}>{Number(rating).toFixed(1).toString()}</Text>
       </Col>
     </Row>
   );
@@ -55,6 +57,7 @@ MovieDescription.propTypes = {
   ratingFontType: PropTypes.oneOf([
     'white_with_background',
     'secondary_with_background',
+    'bordered',
   ]),
 };
 

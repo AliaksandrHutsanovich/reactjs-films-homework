@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 
 import { Text } from '../../components';
@@ -49,4 +49,4 @@ const Loading = () => (
   </div>
 );
 
-export default Loading;
+export default memo(Loading);

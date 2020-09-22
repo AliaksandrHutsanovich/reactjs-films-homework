@@ -3,13 +3,12 @@
   src: url('../../assets/fonts/HelveticaNeue.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'HelveticaNeueCondensedBlack';
-  src: url('../../assets/fonts/HelveticaNeueCondensedBlack.ttf') format('truetype');
-}
-
 .header {
   color: white !important;
+}
+
+.blueHeader {
+  color: rgb(10, 174, 228) !important;
 }
 
 .bold {
@@ -26,4 +25,12 @@
 
 .arial {
   font-family: Arial;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
 }

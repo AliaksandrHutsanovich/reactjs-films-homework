@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieCardCover /> should render properly 1`] = `
+<Layout
+  className="class"
+  style={
+    Object {
+      "background": "url(//url) no-repeat",
+    }
+  }
+>
+  <UNDEFINED
+    genres={
+      Array [
+        "action",
+        "genre",
+      ]
+    }
+    info="Some info"
+    onClose={[Function]}
+    onDialogOpen={[Function]}
+    rating={5.5}
+    title="Assasiens criesd"
+  />
+</Layout>
+`;

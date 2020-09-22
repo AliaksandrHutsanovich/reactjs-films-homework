@@ -1,83 +1,30 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { Layout, Row, Col } from 'antd';
-import {
-  Text,
-  SearchInput,
-  HeadLine,
-  List,
-  Button,
-  Divider,
-} from '../../components';
-import { RatingStar } from '../../patterns';
+import { Layout } from 'antd';
+import PageHeader from './PageHeader';
+import MainInfoSection from './MainInfoSection';
+import MoviesSection from './MoviesSection';
+import PageFooter from './PageFooter';
+import { useSelectionOperation } from '../../hooks';
+import { SEARCH_VALUE_SELECTOR_TITLE } from '../../constants';
 
 import styles from './FilmsPage.scss';
 
-const { Header } = Layout;
+const FilmsPage = ({ onAction }) => {
+  const handleSearch = useSelectionOperation(SEARCH_VALUE_SELECTOR_TITLE);
 
-const types = [
-  { id: 1, text: 'Adventure' },
-  { id: 2, text: 'Drame' },
-  { id: 3, text: 'Family' },
-  { id: 4, text: 'Fantasy' },
-];
-
-const FilmsPage = ({ onAction }) => (
-  <Layout className={styles.wrapper}>
-    <Header className={styles.header}>
-      <HeadLine text="FILMS" level={3} fontFamily="arial" />
-      <SearchInput onSearch={onAction} />
-    </Header>
-    <Layout className={styles.layout}>
-      <Row>
-        <Col span={12} className={styles.rightCol}>
-          <HeadLine text="THE JUNGLE BOOK" level={2} />
-          <Row className={styles.infoWrapper}>
-            <Col className={styles.listWrapper}>
-              <List
-                dataSource={types}
-                size="small"
-                grid={{ column: 4 }}
-                itemAutoWidth
-                itemMarginLeft={15}
-              />
-            </Col>
-            <Divider type="vertical" />
-            <Text type="white" size={12}>
-              1h 46m
-            </Text>
-          </Row>
-          <RatingStar rating="4.6" />
-        </Col>
-        <Col span={12} className={styles.leftCol}>
-          <Layout className={styles.textWrapper}>
-            <Text type="with_shadow" size={12}>
-              There are growing dangers in the
-              wizarding world of 1926 New York.
-              Something misterious is leaving a
-              path of destructions in the streets,
-              threatening to expose the wizarding.
-            </Text>
-          </Layout>
-          <Row className={styles.buttonsWrapper}>
-            <Button
-              title="Watch Now"
-              onClick={onAction}
-            />
-            <Button
-              title="View Info"
-              onClick={onAction}
-              type="outlined"
-            />
-          </Row>
-        </Col>
-      </Row>
+  return (
+    <Layout className={styles.wrapper}>
+      <PageHeader onAction={handleSearch} />
+      <MainInfoSection onAction={onAction} />
+      <MoviesSection />
+      <PageFooter />
     </Layout>
-  </Layout>
-);
+  );
+};
 
 FilmsPage.propTypes = {
   onAction: PropTypes.func.isRequired,
 };
 
-export default FilmsPage;
+export default memo(FilmsPage);

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieInfoCard /> cardExample should be rendered properly 1`] = `
+<Card
+  className="card"
+>
+  <Meta
+    description={
+      <Layout
+        className="card__content"
+      >
+        <ForwardRef(CloseOutlined)
+          className="icon"
+          onClick={[Function]}
+        />
+        <UNDEFINED
+          genres={
+            Array [
+              "Action",
+              "Adventure",
+              "Fantasy",
+            ]
+          }
+          rating="4.7"
+          ratingFontType="bordered"
+          title="ASSASIN'S CREED"
+          titleFontType="white"
+        />
+        <Layout
+          className="card__textWrapper"
+        >
+          <UNDEFINED
+            size={12}
+            type="white"
+          >
+            
+  There are growing dangers in the
+  wizarding world of 1926 New York.
+  Something misterious is leaving a
+  path of destructions in the streets,
+  threatening to expose the wizarding.
+
+          </UNDEFINED>
+        </Layout>
+        <UNDEFINED
+          onClick={[Function]}
+          title="Watch Now"
+        />
+      </Layout>
+    }
+  />
+</Card>
+`;

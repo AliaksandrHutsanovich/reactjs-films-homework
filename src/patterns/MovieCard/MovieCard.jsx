@@ -1,10 +1,13 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 import { Card } from 'antd';
+import { Image } from '../../containers';
 
 import '!style-loader!css-loader!sass-loader!antd/dist/antd.css'; //eslint-disable-line
 
 import MovieDescription from '../MovieDescription';
+import preload from '../../assets/images/preload.png';
 
 import styles from './MovieCard.scss';
 
@@ -15,10 +18,23 @@ const MovieCard = ({
   genres,
   rating,
   imgUrl,
+  info,
+  hoverable,
+  renderHoverableContent,
+  renderCoveringContent,
+  showCoveringContent,
+  onShowCover,
 }) => (
   <Card
-    className={styles.card}
-    cover={<img alt="cardImg" src={imgUrl} className={styles.image} />}
+    className={clsx(styles.card, { [styles.hoverable]: hoverable && !showCoveringContent })}
+    cover={(
+      <div className={styles.imageWrapper}>
+        <Image preload={preload} alt="cardImg" imgUrl={imgUrl} className={styles.image} spinClassName={styles.imageSpin} />
+        <div className={styles.hoverableContentWrapper}>
+          {renderHoverableContent(onShowCover)}
+        </div>
+      </div>
+    )}
   >
     <Meta
       description={(
@@ -26,10 +42,25 @@ const MovieCard = ({
           title={title}
           genres={genres}
           rating={rating}
-          ratingFontType="secondary_with_background"
+          ratingFontType="bordered"
         />
       )}
     />
+    <div
+      className={clsx(
+        styles.coveringContentWrapper,
+        { [styles.showCover]: showCoveringContent },
+      )}
+    >
+      {renderCoveringContent(
+        title,
+        genres,
+        rating,
+        info,
+        onShowCover,
+        imgUrl,
+      )}
+    </div>
   </Card>
 );
 
@@ -43,6 +74,23 @@ MovieCard.propTypes = {
     PropTypes.number,
   ]).isRequired,
   imgUrl: PropTypes.string.isRequired,
+  hoverable: PropTypes.bool,
+  renderHoverableContent: PropTypes.func,
+  renderCoveringContent: PropTypes.func,
+  info: PropTypes.string,
+  showCoveringContent: PropTypes.bool,
+  onShowCover: PropTypes.func,
+};
+
+export const renderDefaultContent = () => (<div />);
+
+MovieCard.defaultProps = {
+  hoverable: false,
+  renderHoverableContent: renderDefaultContent,
+  renderCoveringContent: renderDefaultContent,
+  showCoveringContent: false,
+  onShowCover: null,
+  info: '',
 };
 
 export default memo(MovieCard); // additional memoization is possible

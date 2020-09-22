@@ -1,0 +1,34 @@
+@font-face{
+  font-family: 'HelveticaNeue';
+  src: url('../../assets/fonts/HelveticaNeue.ttf') format('truetype');
+}
+
+.select {
+  width: fit-content;
+  color: #1890ff;
+  font: 14px HelveticaNeue;
+
+  span {
+    opacity: 1;
+  }
+}
+
+.arrowIcon {
+  color: #1890ff;
+  font-size: 10px;
+}
+
+.option {
+  color: #1890ff;
+  width: fit-content;
+}
+
+.dropDown {
+  width: auto !important;
+
+  > div > div:nth-child(2) > div > div {
+    position: static !important;
+  }
+}
+
+

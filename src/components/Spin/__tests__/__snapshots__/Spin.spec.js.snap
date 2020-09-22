@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spin /> defaultSpin should be rendered properly 1`] = `
+<Spin
+  size="default"
+  spinning={true}
+  wrapperClassName=""
+/>
+`;
+
+exports[`<Spin /> largeSpin should be rendered properly 1`] = `
+<Spin
+  size="large"
+  spinning={true}
+  wrapperClassName=""
+/>
+`;
+
+exports[`<Spin /> smallSpin should be rendered properly 1`] = `
+<Spin
+  size="small"
+  spinning={true}
+  wrapperClassName=""
+/>
+`;

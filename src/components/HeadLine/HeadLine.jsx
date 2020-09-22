@@ -14,10 +14,23 @@ const HeadLine = ({
   text,
   weight,
   fontFamily,
+  type,
+  align,
 }) => (
   <Title
     level={level}
-    className={clsx(styles.header, styles[weight], styles[fontFamily])}
+    className={
+      clsx(
+        {
+          [styles.header]: type === 'normal',
+          [styles.blueHeader]: type === 'blue',
+          [styles.alignCenter]: align === 'center',
+          [styles.alignRight]: align === 'right',
+        },
+        styles[weight],
+        styles[fontFamily],
+      )
+    }
   >
     {text}
   </Title>
@@ -34,12 +47,23 @@ HeadLine.propTypes = {
     'helveticaNeue',
     'arial',
   ]),
+  type: PropTypes.oneOf([
+    'normal',
+    'blue',
+  ]),
+  align: PropTypes.oneOf([
+    'left',
+    'center',
+    'right',
+  ]),
 };
 
 HeadLine.defaultProps = {
   level: 1,
   weight: 'normal',
   fontFamily: 'helveticaNeue',
+  type: 'normal',
+  align: 'left',
 };
 
 export default memo(HeadLine);

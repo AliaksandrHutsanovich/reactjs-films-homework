@@ -6,3 +6,7 @@ export { default as Divider } from './Divider';
 export { default as Text } from './Text';
 export { default as Button } from './Button';
 export { default as Tabs } from './Tabs';
+export { default as Select } from './Select';
+export { default as Dialog } from './Dialog';
+export { default as VideoPlayer } from './VideoPlayer';
+export { default as Spin } from './Spin';
