@@ -8,7 +8,7 @@ import React, {
 import PropTypes from 'prop-types';
 import { Layout } from 'antd';
 import InfiniteScroll from 'react-infinite-scroller';
-import { Loading } from '../../patterns';
+import { Load } from '../../patterns';
 import {
   useDataRequest,
   useItemsSelector,
@@ -89,7 +89,7 @@ const MovieListContainer = ({ type }) => {
         hasMore={page !== totalPages}
         loader={(
           <div key={0} className={styles.loadingWrapper}>
-            <Loading />
+            <Load />
           </div>
         )}
       >

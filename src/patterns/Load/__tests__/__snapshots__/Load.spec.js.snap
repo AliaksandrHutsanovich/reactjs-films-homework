@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Load /> loadExample should be rendered properly 1`] = `
+<div
+  className="wrapper"
+>
+  <ul
+    className="wrapper__list"
+  >
+    <li>
+      <div
+        className="wrapper__list_item"
+      />
+    </li>
+    <li>
+      <div
+        className="wrapper__list_item"
+      />
+    </li>
+    <li>
+      <div
+        className="wrapper__list_item"
+      />
+    </li>
+  </ul>
+  <UNDEFINED
+    type="normal"
+  >
+    LOADING
+  </UNDEFINED>
+</div>
+`;
