@@ -37,4 +37,3 @@ script:
   ## a specific secret key to use
   ## like this without having to
   ## configure anything in Travis CI:
-  ## - cypress ci 703b33d9-a00e-4c66-90c2-40efc0fee2c6
