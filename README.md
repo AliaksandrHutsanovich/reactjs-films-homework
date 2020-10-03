@@ -1,2 +1,2 @@
 # reactjs-films-homework
-![Cirrus CI - Base Branch Build Status](https://img.shields.io/cirrus/github/AliaksandrHutsanovich/reactjs-films-homework)
+![Travis (.org)](https://img.shields.io/travis/AliaksandrHutsanovich/reactjs-films-homework)
