@@ -1,2 +1,2 @@
 # reactjs-films-homework
-![Travis (.org)](https://img.shields.io/travis/AliaksandrHutsanovich/reactjs-films-homework)
+[![Build Status](https://travis-ci.com/AliaksandrHutsanovich/reactjs-films-homework.svg?branch=master)](https://travis-ci.com/AliaksandrHutsanovich/reactjs-films-homework)
