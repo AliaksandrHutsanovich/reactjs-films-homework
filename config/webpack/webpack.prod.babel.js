@@ -25,7 +25,6 @@ module.exports = {
       {
         test: common.module.rules[1].test,
         use: [
-          common.module.rules[1].use[0],
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
