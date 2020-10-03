@@ -3,6 +3,11 @@
 exports[`<MainInfoSection /> should be rendered properly 1`] = `
 <Layout
   className="layout"
+  style={
+    Object {
+      "background": "url(/string) no-repeat",
+    }
+  }
 >
   <ForwardRef>
     <ForwardRef
@@ -11,7 +16,7 @@ exports[`<MainInfoSection /> should be rendered properly 1`] = `
     >
       <UNDEFINED
         level={2}
-        text="THE JUNGLE BOOK"
+        text="some movie"
       />
       <ForwardRef
         className="infoWrapper"
@@ -24,19 +29,11 @@ exports[`<MainInfoSection /> should be rendered properly 1`] = `
               Array [
                 Object {
                   "id": 1,
-                  "text": "Adventure",
+                  "name": "genre 1",
                 },
                 Object {
                   "id": 2,
-                  "text": "Drame",
-                },
-                Object {
-                  "id": 3,
-                  "text": "Family",
-                },
-                Object {
-                  "id": 4,
-                  "text": "Fantasy",
+                  "name": "genre 2",
                 },
               ]
             }
@@ -61,7 +58,7 @@ exports[`<MainInfoSection /> should be rendered properly 1`] = `
         </UNDEFINED>
       </ForwardRef>
       <UNDEFINED
-        rating="4.6"
+        rating={4.5}
       />
     </ForwardRef>
     <ForwardRef
@@ -75,7 +72,7 @@ exports[`<MainInfoSection /> should be rendered properly 1`] = `
           size={12}
           type="with_shadow"
         >
-          There are growing dangers in the wizarding world of 1926 New York. Something misterious is leaving a path of destructions in the streets, threatening to expose the wizarding.
+          This is info about movie
         </UNDEFINED>
       </Layout>
       <ForwardRef

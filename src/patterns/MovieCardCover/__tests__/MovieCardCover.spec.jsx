@@ -7,6 +7,7 @@ describe('<MovieCardCover />', () => {
   it('should render properly', () => {
     renderer.render(
       <MovieCardCover
+        id={1}
         title="Assasiens criesd"
         genres={['action', 'genre']}
         rating={5.5}

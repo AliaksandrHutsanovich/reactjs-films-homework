@@ -4,6 +4,7 @@ import React, {
   useState,
   useCallback,
   useRef,
+  useContext,
 } from 'react';
 import PropTypes from 'prop-types';
 import { Layout } from 'antd';
@@ -25,12 +26,14 @@ import getRenderHoverableContent from './utils/getRenderHoverableContent';
 import getRenderCoveringContent from './utils/getRenderCoveringContent';
 import resetValue from '../../utils/resetValueByCompareValues';
 import { List } from '../../components';
+import ScrollerRefContext from '../../contexts';
 
 import styles from './MovieList.container.scss';
 
 const MovieListContainer = ({ type }) => {
   const searchValue = useSearchEntitiesSelector();
   const filterGenreValue = useFilterByGenreEntitiesSelector();
+  const refToScroller = useContext(ScrollerRefContext);
 
   const requestType = useMemo(
     () => (searchValue && type === REQUEST_TYPES.TRENDING ? REQUEST_TYPES.SEARCH : type),
@@ -57,6 +60,7 @@ const MovieListContainer = ({ type }) => {
   const renderCard = (item) => (
     <MovieCard
       key={item.id}
+      id={item.id}
       title={item.title}
       genres={item.genre_ids.map((itemId) => (genresById[itemId] ? genresById[itemId].name : ''))}
       rating={item.vote_average / 2}
@@ -92,6 +96,9 @@ const MovieListContainer = ({ type }) => {
             <Load />
           </div>
         )}
+        useWindow={false}
+        getScrollParent={() => refToScroller}
+        threshold={-300}
       >
         {cards}
       </InfiniteScroll>

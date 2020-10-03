@@ -8,7 +8,13 @@ describe('<FilmsPage />', () => {
   it('should be rendered properly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-      <FilmsPage onAction={() => {}} />,
+      <FilmsPage
+        withBackground
+        scrollerRef={{}}
+        onSearch={() => {}}
+        onScroll={() => {}}
+        setRef={() => {}}
+      />,
     );
     const result = renderer.getRenderOutput();
 

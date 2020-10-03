@@ -15,12 +15,12 @@ const getTestInitialState = (type, data, searchValue, filterByGenre, totalPages)
     [type]: {
       [page]: {
         [getIdsSelectorTitle(type)]: data.map(({ id }) => id),
-        [getItemByIdSelectorTitle(type)]: data.reduce((res, d) => ({
-          ...res,
-          [d.id]: d,
-        }), {}),
         [getItemsSelectorTitle(type)]: data,
       },
+      [getItemByIdSelectorTitle(type)]: data.reduce((res, d) => ({
+        ...res,
+        [d.id]: d,
+      }), {}),
       totalPages,
     },
     [SEARCH_VALUE_SELECTOR_TITLE]: searchValue,

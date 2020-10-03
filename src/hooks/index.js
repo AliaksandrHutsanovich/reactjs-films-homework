@@ -9,3 +9,4 @@ export { default as useSelectionOperation } from './useSearch';
 export { default as useGenresSelector } from './useGenresSelector';
 export { default as useVideosRequest } from './useVideosRequest';
 export { default as usePreviousCash } from './usePreviousCash';
+export { default as useMovieDetailsRequest } from './useMovieDetailsRequest';

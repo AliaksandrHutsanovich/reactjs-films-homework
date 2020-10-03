@@ -6,8 +6,8 @@ import {
   getTotalPagesSelector,
 } from '../modules/moviesRequest.module';
 
-const useItemsSelector = (type, page) => {
-  const items = useSelector(getImmutableByIdSelector(type, page));
+const useItemsSelector = (type) => {
+  const items = useSelector(getImmutableByIdSelector(type));
   return items;
 };
 

@@ -11,6 +11,7 @@ const MovieCardContainer = ({
   hoverable,
   renderHoverableContent,
   renderCoveringContent,
+  id,
 }) => {
   const [isShown, showCover] = useState(false);
 
@@ -26,6 +27,7 @@ const MovieCardContainer = ({
       renderCoveringContent={renderCoveringContent}
       showCoveringContent={isShown}
       onShowCover={showCover}
+      id={id}
     />
   );
 };
@@ -44,6 +46,7 @@ MovieCardContainer.propTypes = {
   renderHoverableContent: PropTypes.func,
   renderCoveringContent: PropTypes.func,
   info: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 const renderDefaultContent = () => (<div />);

@@ -12,6 +12,7 @@ const getRenderCoveringContent = (id, handleOpen) => (
   imgUrl,
 ) => (
   <MovieCardCover
+    id={id}
     title={title}
     genres={genres}
     rating={rating}

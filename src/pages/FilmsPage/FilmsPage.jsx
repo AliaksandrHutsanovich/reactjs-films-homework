@@ -1,30 +1,59 @@
-import React, { memo } from 'react';
+import React, {
+  memo,
+} from 'react';
 import PropTypes from 'prop-types';
+import { Route, Switch } from 'react-router-dom';
 import { Layout } from 'antd';
-import PageHeader from './PageHeader';
-import MainInfoSection from './MainInfoSection';
+import { MainInfoSection, PageHeader } from '../../containers';
 import MoviesSection from './MoviesSection';
 import PageFooter from './PageFooter';
-import { useSelectionOperation } from '../../hooks';
-import { SEARCH_VALUE_SELECTOR_TITLE } from '../../constants';
+import ScrollerRefContext, { BackgroundProvider } from '../../contexts';
 
 import styles from './FilmsPage.scss';
 
-const FilmsPage = ({ onAction }) => {
-  const handleSearch = useSelectionOperation(SEARCH_VALUE_SELECTOR_TITLE);
-
-  return (
+const FilmsPage = ({
+  withBackground,
+  scrollerRef,
+  onSearch,
+  onScroll,
+  setRef,
+}) => (
+  <div
+    className={styles.scroller}
+    onScroll={onScroll}
+    ref={setRef}
+  >
     <Layout className={styles.wrapper}>
-      <PageHeader onAction={handleSearch} />
-      <MainInfoSection onAction={onAction} />
-      <MoviesSection />
+      <BackgroundProvider>
+        <PageHeader
+          onAction={onSearch}
+          withBackground={withBackground}
+        />
+        <Switch>
+          <Route path="/:id">
+            <MainInfoSection />
+          </Route>
+        </Switch>
+      </BackgroundProvider>
+      <ScrollerRefContext.Provider value={scrollerRef}>
+        <MoviesSection />
+      </ScrollerRefContext.Provider>
       <PageFooter />
     </Layout>
-  );
-};
+  </div>
+);
 
 FilmsPage.propTypes = {
-  onAction: PropTypes.func.isRequired,
+  withBackground: PropTypes.bool,
+  scrollerRef: PropTypes.shape({}),
+  onSearch: PropTypes.func.isRequired,
+  onScroll: PropTypes.func.isRequired,
+  setRef: PropTypes.func.isRequired,
+};
+
+FilmsPage.defaultProps = {
+  withBackground: null,
+  scrollerRef: null,
 };
 
 export default memo(FilmsPage);

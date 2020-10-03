@@ -21,10 +21,10 @@ export default {
 };
 
 const names = [
-  { id: 1, text: 'Alex' },
-  { id: 2, text: 'Valdis' },
-  { id: 3, text: 'Gustav' },
-  { id: 4, text: 'Vlad' },
+  { id: 1, name: 'Alex' },
+  { id: 2, name: 'Valdis' },
+  { id: 3, name: 'Gustav' },
+  { id: 4, name: 'Vlad' },
 ];
 
 export const verticalList = () => (

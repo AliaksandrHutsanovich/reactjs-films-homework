@@ -1,16 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PageHeader /> should be rendered properly 1`] = `
+exports[`<PageHeader /> should be rendered properly with background 1`] = `
 <Header
   className="header"
+  style={
+    Object {
+      "background": "url(/url) no-repeat",
+    }
+  }
 >
-  <UNDEFINED
-    fontFamily="arial"
-    level={3}
-    text="FILMS"
-  />
-  <UNDEFINED
-    onSearch={[Function]}
-  />
+  <div
+    className="header__container"
+  >
+    <UNDEFINED
+      fontFamily="arial"
+      level={3}
+      text="FILMS"
+    />
+    <UNDEFINED
+      onSearch={[Function]}
+    />
+  </div>
+</Header>
+`;
+
+exports[`<PageHeader /> should be rendered properly without background 1`] = `
+<Header
+  className="header"
+  style={
+    Object {
+      "background": "white",
+    }
+  }
+>
+  <div
+    className="header__container"
+  >
+    <UNDEFINED
+      fontFamily="arial"
+      level={3}
+      text="FILMS"
+    />
+    <UNDEFINED
+      onSearch={[Function]}
+    />
+  </div>
 </Header>
 `;

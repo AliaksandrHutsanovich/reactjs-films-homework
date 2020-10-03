@@ -13,7 +13,7 @@ const { Item } = AntdList;
 export const renderListItem = (item) => (
   <Item className={styles.listItem}>
     <Text type="white" size={12}>
-      {item.text}
+      {item.name}
     </Text>
   </Item>
 );

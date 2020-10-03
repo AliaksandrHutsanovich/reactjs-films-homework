@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { Card, Layout } from 'antd';
 import { CloseOutlined } from '@ant-design/icons';
+import renderTitle from './utils/renderTitle';
 
 import '!style-loader!css-loader!sass-loader!antd/dist/antd.css'; //eslint-disable-line
 
@@ -13,6 +14,7 @@ import styles from './MovieInfoCard.scss';
 const { Meta } = Card;
 
 const MovieInfoCard = ({
+  id,
   title,
   genres,
   rating,
@@ -29,11 +31,13 @@ const MovieInfoCard = ({
             className={styles.icon}
           />
           <MovieDescription
+            id={id}
             title={title}
             genres={genres}
             rating={rating}
             ratingFontType="bordered"
             titleFontType="white"
+            renderTitle={renderTitle}
           />
           <Layout className={styles.card__textWrapper}>
             <Text type="white" size={12}>
@@ -62,6 +66,7 @@ MovieInfoCard.propTypes = {
   info: PropTypes.string,
   onClose: PropTypes.func.isRequired,
   onDialogOpen: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 MovieInfoCard.defaultProps = {

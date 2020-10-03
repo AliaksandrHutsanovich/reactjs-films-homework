@@ -16,6 +16,7 @@ exports[`<MovieCardCover /> should render properly 1`] = `
         "genre",
       ]
     }
+    id={1}
     info="Some info"
     onClose={[Function]}
     onDialogOpen={[Function]}

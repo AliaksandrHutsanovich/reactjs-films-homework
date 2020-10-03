@@ -1,16 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FilmsPage /> should be rendered properly 1`] = `
-<Layout
-  className="wrapper"
+<div
+  className="scroller"
+  onScroll={[Function]}
 >
-  <UNDEFINED
-    onAction={[Function]}
-  />
-  <UNDEFINED
-    onAction={[Function]}
-  />
-  <UNDEFINED />
-  <UNDEFINED />
-</Layout>
+  <Layout
+    className="wrapper"
+  >
+    <BackgroundProvider>
+      <UNDEFINED
+        onAction={[Function]}
+        withBackground={true}
+      />
+      <Switch>
+        <Route
+          path="/:id"
+        >
+          <UNDEFINED />
+        </Route>
+      </Switch>
+    </BackgroundProvider>
+    <Context.Provider
+      value={Object {}}
+    >
+      <UNDEFINED />
+    </Context.Provider>
+    <UNDEFINED />
+  </Layout>
+</div>
 `;

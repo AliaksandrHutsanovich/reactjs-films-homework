@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 import MovieInfoCard from '../MovieInfoCard';
 
 const MovieCardCover = ({
+  id,
   title,
   genres,
   rating,
@@ -20,6 +21,7 @@ const MovieCardCover = ({
     className={layoutClassName}
   >
     <MovieInfoCard
+      id={id}
       title={title}
       genres={genres}
       rating={rating}
@@ -39,6 +41,7 @@ MovieCardCover.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   layoutClassName: PropTypes.string,
   onDialogOpen: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 MovieCardCover.defaultProps = {

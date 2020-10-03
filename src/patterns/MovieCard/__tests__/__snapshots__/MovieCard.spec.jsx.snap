@@ -34,6 +34,7 @@ exports[`<MovieCard /> card should be rendered properly 1`] = `
             "Fantasy",
           ]
         }
+        id={3}
         rating="4.7"
         ratingFontType="bordered"
         title="ASSASIN'S CREED"
@@ -82,6 +83,7 @@ exports[`<MovieCard /> card with covering content should be rendered properly 1`
             "Fantasy",
           ]
         }
+        id={2}
         rating="4.7"
         ratingFontType="bordered"
         title="ASSASIN'S CREED"

@@ -14,6 +14,8 @@ const MovieDescription = ({
   rating,
   titleFontType,
   ratingFontType,
+  renderTitle,
+  id,
 }) => {
   const genresList = useMemo(
     () => (genres.length ? (
@@ -28,7 +30,11 @@ const MovieDescription = ({
     <Row justify="space-between">
       <Col span={20}>
         <Row className={styles.hidden}>
-          <Text size={14} type={titleFontType} textOverflow strong>{title}</Text>
+          {useMemo(() => (
+            typeof renderTitle === 'function'
+              ? renderTitle(id, title, titleFontType)
+              : <Text size={14} type={titleFontType} textOverflow strong>{title}</Text>
+          ), [id, renderTitle, title, titleFontType])}
         </Row>
         <Row>
           <Text type="secondary" size={12}>{genresList}</Text>
@@ -59,11 +65,14 @@ MovieDescription.propTypes = {
     'secondary_with_background',
     'bordered',
   ]),
+  renderTitle: PropTypes.func,
+  id: PropTypes.number.isRequired,
 };
 
 MovieDescription.defaultProps = {
   titleFontType: 'normal',
   ratingFontType: 'white_with_background',
+  renderTitle: null,
 };
 
 export default memo(MovieDescription); // additional memoization is possible

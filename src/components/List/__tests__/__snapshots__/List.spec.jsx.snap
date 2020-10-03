@@ -15,19 +15,19 @@ exports[`<List /> horizontalList should be rendered properly 1`] = `
     Array [
       Object {
         "id": 1,
-        "text": "Alex",
+        "name": "Alex",
       },
       Object {
         "id": 2,
-        "text": "Valdis",
+        "name": "Valdis",
       },
       Object {
         "id": 3,
-        "text": "Gustav",
+        "name": "Gustav",
       },
       Object {
         "id": 4,
-        "text": "Vlad",
+        "name": "Vlad",
       },
     ]
   }
@@ -48,9 +48,7 @@ exports[`<List /> list item should be rendered properly 1`] = `
   <UNDEFINED
     size={12}
     type="white"
-  >
-    retop
-  </UNDEFINED>
+  />
 </Item>
 `;
 
@@ -61,19 +59,19 @@ exports[`<List /> verticalList should be rendered properly 1`] = `
     Array [
       Object {
         "id": 1,
-        "text": "Alex",
+        "name": "Alex",
       },
       Object {
         "id": 2,
-        "text": "Valdis",
+        "name": "Valdis",
       },
       Object {
         "id": 3,
-        "text": "Gustav",
+        "name": "Gustav",
       },
       Object {
         "id": 4,
-        "text": "Vlad",
+        "name": "Vlad",
       },
     ]
   }

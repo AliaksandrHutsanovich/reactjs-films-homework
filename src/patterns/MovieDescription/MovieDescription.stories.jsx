@@ -27,6 +27,7 @@ const genres = [
 
 export const cardMetaInfo = () => (
   <MovieDescription
+    id={1}
     title="ASSASIN'S CREED"
     genres={genres}
     rating="4.7"

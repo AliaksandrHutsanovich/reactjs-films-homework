@@ -59,7 +59,10 @@ MovieDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
   onCancel: PropTypes.func.isRequired,
-  movieId: PropTypes.number.isRequired,
+  movieId: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]).isRequired,
 };
 
 export default memo(MovieDialog);

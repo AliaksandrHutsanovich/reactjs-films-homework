@@ -72,7 +72,10 @@ const RatingStar = ({
 // &#9733; this is a filled star, it as more apropriate
 
 RatingStar.propTypes = {
-  rating: PropTypes.string.isRequired,
+  rating: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]).isRequired,
 };
 
 export default memo(RatingStar);

@@ -36,6 +36,7 @@ const info = `
 
 export const cardExample = () => (
   <MovieInfoCard
+    id={1}
     title="ASSASIN'S CREED"
     genres={genres}
     rating="4.7"

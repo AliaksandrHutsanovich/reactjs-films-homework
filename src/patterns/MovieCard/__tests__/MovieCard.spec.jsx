@@ -15,6 +15,7 @@ describe('<MovieCard />', () => {
   it('card should be rendered properly', () => {
     renderer.render(
       <MovieCard
+        id={3}
         title="ASSASIN'S CREED"
         genres={genres}
         rating="4.7"

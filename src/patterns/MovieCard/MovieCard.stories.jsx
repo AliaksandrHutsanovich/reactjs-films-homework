@@ -15,6 +15,7 @@ const genres = [
 
 export const cardExample = () => (
   <MovieCard
+    id={1}
     title="ASSASIN'S CREED"
     genres={genres}
     rating="4.7"
@@ -26,6 +27,7 @@ export const cardExample = () => (
 
 export const coveringCardExample = () => (
   <MovieCard
+    id={2}
     title="ASSASIN'S CREED"
     genres={genres}
     rating="4.7"

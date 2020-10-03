@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Layout, Row, Col } from 'antd';
 import {
@@ -12,22 +12,36 @@ import { RatingStar } from '../../../patterns';
 
 import styles from '../FilmsPage.scss';
 
-const types = [
-  { id: 1, text: 'Adventure' },
-  { id: 2, text: 'Drame' },
-  { id: 3, text: 'Family' },
-  { id: 4, text: 'Fantasy' },
-];
+// const types = [
+//   { id: 1, text: 'Adventure' },
+//   { id: 2, text: 'Drame' },
+//   { id: 3, text: 'Family' },
+//   { id: 4, text: 'Fantasy' },
+// ];
 
-const MainInfoSection = ({ onAction }) => (
-  <Layout className={styles.layout}>
+const MainInfoSection = ({
+  title,
+  genres,
+  rating,
+  imgUrl,
+  info,
+  isInfoShown,
+  onShowInfo,
+  onWatchNow,
+}) => (
+  <Layout
+    className={styles.layout}
+    style={{
+      background: `url(${imgUrl}) no-repeat`,
+    }}
+  >
     <Row>
       <Col span={12} className={styles.rightCol}>
-        <HeadLine text="THE JUNGLE BOOK" level={2} />
+        <HeadLine text={title} level={2} />
         <Row className={styles.infoWrapper}>
           <Col className={styles.listWrapper}>
             <List
-              dataSource={types}
+              dataSource={genres}
               size="small"
               grid={{ column: 4 }}
               itemAutoWidth
@@ -39,26 +53,26 @@ const MainInfoSection = ({ onAction }) => (
             1h 46m
           </Text>
         </Row>
-        <RatingStar rating="4.6" />
+        <RatingStar rating={rating} />
       </Col>
       <Col span={12} className={styles.leftCol}>
-        <Layout className={styles.textWrapper}>
-          <Text type="with_shadow" size={12}>
-            There are growing dangers in the
-            wizarding world of 1926 New York.
-            Something misterious is leaving a
-            path of destructions in the streets,
-            threatening to expose the wizarding.
-          </Text>
-        </Layout>
+        {useMemo(() => (
+          isInfoShown && (
+            <Layout className={styles.textWrapper}>
+              <Text type="with_shadow" size={12}>
+                {info}
+              </Text>
+            </Layout>
+          )
+        ), [isInfoShown, info])}
         <Row className={styles.buttonsWrapper}>
           <Button
             title="Watch Now"
-            onClick={onAction}
+            onClick={onWatchNow}
           />
           <Button
             title="View Info"
-            onClick={onAction}
+            onClick={onShowInfo}
             type="outlined"
           />
         </Row>
@@ -68,7 +82,22 @@ const MainInfoSection = ({ onAction }) => (
 );
 
 MainInfoSection.propTypes = {
-  onAction: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  genres: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  rating: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  info: PropTypes.string.isRequired,
+  isInfoShown: PropTypes.bool.isRequired,
+  onShowInfo: PropTypes.func.isRequired,
+  onWatchNow: PropTypes.func.isRequired,
 };
 
 export default memo(MainInfoSection);

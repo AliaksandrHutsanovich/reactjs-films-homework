@@ -24,6 +24,7 @@ const MovieCard = ({
   renderCoveringContent,
   showCoveringContent,
   onShowCover,
+  id,
 }) => (
   <Card
     className={clsx(styles.card, { [styles.hoverable]: hoverable && !showCoveringContent })}
@@ -43,6 +44,7 @@ const MovieCard = ({
           genres={genres}
           rating={rating}
           ratingFontType="bordered"
+          id={id}
         />
       )}
     />
@@ -80,6 +82,7 @@ MovieCard.propTypes = {
   info: PropTypes.string,
   showCoveringContent: PropTypes.bool,
   onShowCover: PropTypes.func,
+  id: PropTypes.number.isRequired,
 };
 
 export const renderDefaultContent = () => (<div />);

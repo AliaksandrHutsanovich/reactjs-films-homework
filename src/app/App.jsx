@@ -2,16 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { Provider as ReduxQueryProvider } from 'redux-query-react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { queriesSelector } from '../modules/configureStore';
-import FilmsPage from '../pages';
+import { FilmsPage } from '../containers';
 
 const App = ({ store }) => (
-  <Provider store={store}>
-    <ReduxQueryProvider queriesSelector={queriesSelector}>
-      <FilmsPage onAction={() => {}} />
-    </ReduxQueryProvider>
-  </Provider>
+  <Router>
+    <Provider store={store}>
+      <ReduxQueryProvider queriesSelector={queriesSelector}>
+        <FilmsPage onAction={() => {}} />
+      </ReduxQueryProvider>
+    </Provider>
+  </Router>
 );
 
 App.propTypes = {

@@ -62,7 +62,10 @@ Text.propTypes = {
     'warning',
     'danger',
   ]).isRequired,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
   size: PropTypes.number,
   textOverflow: PropTypes.bool,
 };

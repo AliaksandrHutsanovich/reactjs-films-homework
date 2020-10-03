@@ -33,12 +33,12 @@ export const moviesRequest = (type, query, page = 1) => ({
     [type]: {
       [page]: {
         [getIdsSelectorTitle(type)]: data.map(({ id }) => id),
-        [getItemByIdSelectorTitle(type)]: data.reduce((res, d) => ({
-          ...res,
-          [d.id]: d,
-        }), {}),
         [getItemsSelectorTitle(type)]: data,
       },
+      [getItemByIdSelectorTitle(type)]: data.reduce((res, d) => ({
+        ...res,
+        [d.id]: d,
+      }), {}),
       totalPages,
       currentPage: page,
     },
@@ -47,6 +47,10 @@ export const moviesRequest = (type, query, page = 1) => ({
     [type]: (prev, next) => ({
       ...prev,
       ...next,
+      [getItemByIdSelectorTitle(type)]: {
+        ...(prev && prev[getItemByIdSelectorTitle(type)]),
+        ...next[getItemByIdSelectorTitle(type)],
+      },
     }),
   },
 });
@@ -58,8 +62,8 @@ const getIdsSelector = (type, page) => (state) => {
   return fromArrayToList(ids);
 };
 
-const getByIdSelector = (type, page) => (state) => {
-  const itemsById = getPageSelector(type, page)(state)[getItemByIdSelectorTitle(type)] || {};
+const getByIdSelector = (type) => (state) => {
+  const itemsById = getModuleSelector(type)(state)[getItemByIdSelectorTitle(type)] || {};
   return fromObjToMap(itemsById);
 };
 
@@ -76,9 +80,9 @@ export const getImmutableIdsSelector = (type, page = 1) => (
     (ids) => fromListToArray(ids),
   ));
 
-export const getImmutableByIdSelector = (type, page = 1) => (
+export const getImmutableByIdSelector = (type) => (
   createImmutableSelectorCreator(
-    getByIdSelector(type, page),
+    getByIdSelector(type),
     (itemsById) => fromMapToObject(itemsById),
   ));
 
