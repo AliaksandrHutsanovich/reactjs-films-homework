@@ -35,3 +35,5 @@ export const API_RESPONSE_DATA_FIELDS = {
       }, {},
     ),
 };
+
+export const SCROLL_ID = 'details';

@@ -1,94 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MainInfoSection /> should be rendered properly 1`] = `
-<Layout
-  className="layout"
-  style={
-    Object {
-      "background": "url(/string) no-repeat",
+<React.Fragment>
+  <div
+    id="details"
+  />
+  <Layout
+    className="layout"
+    style={
+      Object {
+        "background": "url(/string) no-repeat",
+      }
     }
-  }
->
-  <ForwardRef>
-    <ForwardRef
-      className="rightCol"
-      span={12}
-    >
-      <UNDEFINED
-        level={2}
-        text="some movie"
-      />
+  >
+    <ForwardRef>
       <ForwardRef
-        className="infoWrapper"
+        className="rightCol"
+        span={12}
       >
+        <UNDEFINED
+          level={2}
+          text="some movie"
+        />
         <ForwardRef
-          className="listWrapper"
+          className="infoWrapper"
         >
-          <UNDEFINED
-            dataSource={
-              Array [
-                Object {
-                  "id": 1,
-                  "name": "genre 1",
-                },
-                Object {
-                  "id": 2,
-                  "name": "genre 2",
-                },
-              ]
-            }
-            grid={
-              Object {
-                "column": 4,
+          <ForwardRef
+            className="listWrapper"
+          >
+            <UNDEFINED
+              dataSource={
+                Array [
+                  Object {
+                    "id": 1,
+                    "name": "genre 1",
+                  },
+                  Object {
+                    "id": 2,
+                    "name": "genre 2",
+                  },
+                ]
               }
-            }
-            itemAutoWidth={true}
-            itemMarginLeft={15}
-            size="small"
+              grid={
+                Object {
+                  "column": 4,
+                }
+              }
+              itemAutoWidth={true}
+              itemMarginLeft={15}
+              size="small"
+            />
+          </ForwardRef>
+          <UNDEFINED
+            type="vertical"
           />
+          <UNDEFINED
+            size={12}
+            type="white"
+          >
+            1h 46m
+          </UNDEFINED>
         </ForwardRef>
         <UNDEFINED
-          type="vertical"
+          rating={4.5}
         />
-        <UNDEFINED
-          size={12}
-          type="white"
-        >
-          1h 46m
-        </UNDEFINED>
       </ForwardRef>
-      <UNDEFINED
-        rating={4.5}
-      />
-    </ForwardRef>
-    <ForwardRef
-      className="leftCol"
-      span={12}
-    >
-      <Layout
-        className="textWrapper"
-      >
-        <UNDEFINED
-          size={12}
-          type="with_shadow"
-        >
-          This is info about movie
-        </UNDEFINED>
-      </Layout>
       <ForwardRef
-        className="buttonsWrapper"
+        className="leftCol"
+        span={12}
       >
-        <UNDEFINED
-          onClick={[Function]}
-          title="Watch Now"
-        />
-        <UNDEFINED
-          onClick={[Function]}
-          title="View Info"
-          type="outlined"
-        />
+        <Layout
+          className="textWrapper"
+        >
+          <UNDEFINED
+            size={12}
+            type="with_shadow"
+          >
+            This is info about movie
+          </UNDEFINED>
+        </Layout>
+        <ForwardRef
+          className="buttonsWrapper"
+        >
+          <UNDEFINED
+            onClick={[Function]}
+            title="Watch Now"
+          />
+          <UNDEFINED
+            onClick={[Function]}
+            title="View Info"
+            type="outlined"
+          />
+        </ForwardRef>
       </ForwardRef>
     </ForwardRef>
-  </ForwardRef>
-</Layout>
+  </Layout>
+</React.Fragment>
 `;

@@ -1,6 +1,7 @@
 import React, { memo, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Layout, Row, Col } from 'antd';
+import { SCROLL_ID } from '../../../constants';
 import {
   Text,
   HeadLine,
@@ -12,13 +13,6 @@ import { RatingStar } from '../../../patterns';
 
 import styles from '../FilmsPage.scss';
 
-// const types = [
-//   { id: 1, text: 'Adventure' },
-//   { id: 2, text: 'Drame' },
-//   { id: 3, text: 'Family' },
-//   { id: 4, text: 'Fantasy' },
-// ];
-
 const MainInfoSection = ({
   title,
   genres,
@@ -29,56 +23,59 @@ const MainInfoSection = ({
   onShowInfo,
   onWatchNow,
 }) => (
-  <Layout
-    className={styles.layout}
-    style={{
-      background: `url(${imgUrl}) no-repeat`,
-    }}
-  >
-    <Row>
-      <Col span={12} className={styles.rightCol}>
-        <HeadLine text={title} level={2} />
-        <Row className={styles.infoWrapper}>
-          <Col className={styles.listWrapper}>
-            <List
-              dataSource={genres}
-              size="small"
-              grid={{ column: 4 }}
-              itemAutoWidth
-              itemMarginLeft={15}
+  <>
+    <div id={SCROLL_ID} />
+    <Layout
+      className={styles.layout}
+      style={{
+        background: `url(${imgUrl}) no-repeat`,
+      }}
+    >
+      <Row>
+        <Col span={12} className={styles.rightCol}>
+          <HeadLine text={title} level={2} />
+          <Row className={styles.infoWrapper}>
+            <Col className={styles.listWrapper}>
+              <List
+                dataSource={genres}
+                size="small"
+                grid={{ column: 4 }}
+                itemAutoWidth
+                itemMarginLeft={15}
+              />
+            </Col>
+            <Divider type="vertical" />
+            <Text type="white" size={12}>
+              1h 46m
+            </Text>
+          </Row>
+          <RatingStar rating={rating} />
+        </Col>
+        <Col span={12} className={styles.leftCol}>
+          {useMemo(() => (
+            isInfoShown && (
+              <Layout className={styles.textWrapper}>
+                <Text type="with_shadow" size={12}>
+                  {info}
+                </Text>
+              </Layout>
+            )
+          ), [isInfoShown, info])}
+          <Row className={styles.buttonsWrapper}>
+            <Button
+              title="Watch Now"
+              onClick={onWatchNow}
             />
-          </Col>
-          <Divider type="vertical" />
-          <Text type="white" size={12}>
-            1h 46m
-          </Text>
-        </Row>
-        <RatingStar rating={rating} />
-      </Col>
-      <Col span={12} className={styles.leftCol}>
-        {useMemo(() => (
-          isInfoShown && (
-            <Layout className={styles.textWrapper}>
-              <Text type="with_shadow" size={12}>
-                {info}
-              </Text>
-            </Layout>
-          )
-        ), [isInfoShown, info])}
-        <Row className={styles.buttonsWrapper}>
-          <Button
-            title="Watch Now"
-            onClick={onWatchNow}
-          />
-          <Button
-            title="View Info"
-            onClick={onShowInfo}
-            type="outlined"
-          />
-        </Row>
-      </Col>
-    </Row>
-  </Layout>
+            <Button
+              title="View Info"
+              onClick={onShowInfo}
+              type="outlined"
+            />
+          </Row>
+        </Col>
+      </Row>
+    </Layout>
+  </>
 );
 
 MainInfoSection.propTypes = {
