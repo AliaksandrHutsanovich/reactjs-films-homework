@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { Provider as ReduxQueryProvider } from 'redux-query-react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 import { queriesSelector } from '../modules/configureStore';
 import { FilmsPage } from '../containers';
@@ -11,7 +11,7 @@ const App = ({ store }) => (
   <Router>
     <Provider store={store}>
       <ReduxQueryProvider queriesSelector={queriesSelector}>
-        <FilmsPage onAction={() => {}} />
+        <FilmsPage />
       </ReduxQueryProvider>
     </Provider>
   </Router>

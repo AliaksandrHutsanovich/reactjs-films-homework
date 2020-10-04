@@ -1,16 +1,8 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
-import { SCROLL_ID } from '../../../constants';
-import { Text } from '../../../components';
-import scrollView from '../../../utils/scrollView';
+import { LinkTitle } from '../../../containers';
 
 const renderTitle = (id, title, titleFontType) => (
-  <Link
-    to={`/${id}#${SCROLL_ID}`}
-    scroll={scrollView}
-  >
-    <Text size={14} type={titleFontType} textOverflow strong>{title}</Text>
-  </Link>
+  <LinkTitle id={id} title={title} titleFontType={titleFontType} />
 );
 
 export default renderTitle;

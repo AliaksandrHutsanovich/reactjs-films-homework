@@ -3,6 +3,7 @@ import React, {
   useState,
   useCallback,
 } from 'react';
+import { useRouteMatch } from 'react-router-dom';
 import { useSelectionOperation } from '../../hooks';
 import { SEARCH_VALUE_SELECTOR_TITLE } from '../../constants';
 import FilmsPage from '../../pages';
@@ -22,6 +23,7 @@ const FilmsPageContainer = () => {
     [withBackground], //eslint-disable-line
   );
   const setRef = useCallback(setScrollerRef, [setScrollerRef]);
+  const { path } = useRouteMatch();
 
   return (
     <FilmsPage
@@ -30,6 +32,7 @@ const FilmsPageContainer = () => {
       onSearch={handleSearch}
       onScroll={handleScroll}
       setRef={setRef}
+      path={path}
     />
   );
 };

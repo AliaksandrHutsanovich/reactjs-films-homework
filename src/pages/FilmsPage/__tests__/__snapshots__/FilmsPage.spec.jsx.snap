@@ -15,7 +15,7 @@ exports[`<FilmsPage /> should be rendered properly 1`] = `
       />
       <Switch>
         <Route
-          path="/:id"
+          path="path:id"
         >
           <UNDEFINED />
         </Route>

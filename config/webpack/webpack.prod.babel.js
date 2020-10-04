@@ -1,5 +1,5 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+
 import { HotModuleReplacementPlugin } from 'webpack';
 import path from 'path';
 import common from './webpack.common';
@@ -14,9 +14,6 @@ module.exports = {
   plugins: [
     ...common.plugins,
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
-    }),
     new HotModuleReplacementPlugin(),
   ],
   module: {
@@ -25,12 +22,7 @@ module.exports = {
       {
         test: common.module.rules[1].test,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '/src',
-            },
-          },
+          common.module.rules[1].use[0],
           common.module.rules[1].use[1],
           common.module.rules[1].use[2],
         ],

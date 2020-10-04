@@ -6,3 +6,4 @@ export { default as MovieDialog } from './MovieDialog';
 export { default as MainInfoSection } from './MainInfoSection';
 export { default as PageHeader } from './PageHeader';
 export { default as FilmsPage } from './FilmsPage';
+export { default as LinkTitle } from './LinkTitle';

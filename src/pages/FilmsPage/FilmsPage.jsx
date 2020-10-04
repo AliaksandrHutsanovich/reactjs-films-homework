@@ -17,6 +17,7 @@ const FilmsPage = ({
   onSearch,
   onScroll,
   setRef,
+  path,
 }) => (
   <div
     className={styles.scroller}
@@ -30,7 +31,7 @@ const FilmsPage = ({
           withBackground={withBackground}
         />
         <Switch>
-          <Route path="/:id">
+          <Route path={`${path}:id`}>
             <MainInfoSection />
           </Route>
         </Switch>
@@ -49,6 +50,7 @@ FilmsPage.propTypes = {
   onSearch: PropTypes.func.isRequired,
   onScroll: PropTypes.func.isRequired,
   setRef: PropTypes.func.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 FilmsPage.defaultProps = {

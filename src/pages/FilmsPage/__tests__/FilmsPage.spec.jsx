@@ -14,6 +14,7 @@ describe('<FilmsPage />', () => {
         onSearch={() => {}}
         onScroll={() => {}}
         setRef={() => {}}
+        path="path"
       />,
     );
     const result = renderer.getRenderOutput();
