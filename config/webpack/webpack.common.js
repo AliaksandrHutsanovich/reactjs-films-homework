@@ -1,5 +1,5 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
 
 const htmlPlugin = new HtmlWebpackPlugin({
@@ -11,6 +11,9 @@ module.exports = {
   entry: './src/index.jsx',
   plugins: [
     htmlPlugin,
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+    }),
   ],
   resolve: {
     modules: [
@@ -40,7 +43,10 @@ module.exports = {
       }, {
         test: /\.(s[ac]ss|css)$/,
         use: [
-          { loader: 'style-loader' },
+          // { loader: 'style-loader' },
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
           {
             loader: 'css-loader',
             options: {
@@ -57,6 +63,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: 'assets/[name].[ext]',
+          publicPath: '../',
         },
       },
     ],

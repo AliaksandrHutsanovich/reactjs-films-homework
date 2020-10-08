@@ -5,7 +5,7 @@
 
 .select {
   width: fit-content;
-  color: #1890ff;
+  color: #1890ff !important;
   font: 14px HelveticaNeue;
 
   span {
@@ -14,12 +14,12 @@
 }
 
 .arrowIcon {
-  color: #1890ff;
+  color: #1890ff !important;
   font-size: 10px;
 }
 
 .option {
-  color: #1890ff;
+  color: #1890ff !important;
   width: fit-content;
 }
 

@@ -1,6 +1,6 @@
 .input {
-  width: 300px;
-  background-color: transparent;
+  width: 300px !important;
+  background-color: transparent !important;
   border-radius: 3px;
 
   > input {
@@ -9,7 +9,7 @@
   }
 
   > span > span:last-child {
-    background-color: transparent;
+    background-color: transparent !important;
 
     > button {
       background-color: transparent;
@@ -25,7 +25,7 @@
 }
 
 .focused {
-  background-color: rgb(93, 155, 212);
+  background-color: rgb(93, 155, 212) !important;
   color: white;
 
   > span > span:last-child > button {

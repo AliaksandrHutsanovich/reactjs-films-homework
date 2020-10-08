@@ -3,11 +3,11 @@
 .card {
   width: #{$cardWidth}px;
   height: #{$cardHeight}px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5) !important;
   border-radius: 4px 4px 0 0;
 
   &__content {
-    background-color: transparent;
+    background-color: transparent !important;
     &>:nth-child(n + 2) {
       margin: 12px 0;
     }

@@ -7,6 +7,9 @@ $imageWidth: 530;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  @media (max-width: 620px) {
+    justify-content: center;
+  }
 }
 
 .hoverableContentWrapper {

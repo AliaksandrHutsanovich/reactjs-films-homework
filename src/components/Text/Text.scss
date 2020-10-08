@@ -14,7 +14,7 @@
 
 .white {
   @extend %font-shared;
-  color: white;
+  color: white !important;
 }
 
 @mixin fillBackground($color) {
