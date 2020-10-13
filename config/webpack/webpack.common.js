@@ -5,6 +5,7 @@ import path from 'path';
 const htmlPlugin = new HtmlWebpackPlugin({
   template: './src/html/index.html',
   filename: './index.html',
+  favicon: './src/assets/images/movie.png',
 });
 
 module.exports = {
