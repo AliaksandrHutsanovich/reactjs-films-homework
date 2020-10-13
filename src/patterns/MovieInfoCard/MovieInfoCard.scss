@@ -26,8 +26,8 @@
 
 .icon {
   width: fit-content;
-  color: white;
-  transition: color 1s ease-in;
+  color: white !important;
+  transition: color 1s ease-in !important;
   transition:  background-color 1s linear;
   &:hover {
     color: yellow;

@@ -1,7 +1,13 @@
 .input {
   width: 300px !important;
   background-color: transparent !important;
-  border-radius: 3px;
+  border-radius: 3px !important;
+  @media (max-width: 510px) {
+    width: 200px !important;
+  }
+  @media (max-width: 320px) {
+    width: 120px !important;
+  }
 
   > input {
     background-color: transparent;

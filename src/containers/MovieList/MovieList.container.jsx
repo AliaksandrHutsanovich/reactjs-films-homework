@@ -98,7 +98,7 @@ const MovieListContainer = ({ type }) => {
         )}
         useWindow={false}
         getScrollParent={() => refToScroller}
-        threshold={-300}
+        threshold={-200}
       >
         {cards}
       </InfiniteScroll>

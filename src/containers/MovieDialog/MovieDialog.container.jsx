@@ -47,7 +47,7 @@ const MovieDialog = ({
       }}
     >
       <VideoPlayer
-        width="400px"
+        width="100%"
         height="300px"
         iframe={useMemo(() => (key ? iframe : <div />), [iframe, key])}
       />

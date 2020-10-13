@@ -19,18 +19,18 @@
 
 @mixin fillBackground($color) {
   display: block;
-  color: white;
+  color: white !important;
   margin: 0;
-  line-height: 12px;
-  padding: 4px 8px;
+  line-height: 12px !important;
+  padding: 4px 8px !important;
   @extend %font-shared;
   background-color: $color;
 }
 
 .withShadow {
   @include fillBackground( rgba(81, 79, 60, 0.5));
-  padding: 10px 13px;
-  line-height: 19px;
+  padding: 10px 13px !important;
+  line-height: 19px !important;
 }
 
 .whiteWithBackground {

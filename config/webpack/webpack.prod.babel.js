@@ -28,8 +28,20 @@ module.exports = {
           common.module.rules[1].use[1],
           common.module.rules[1].use[2],
         ],
+      }, {
+        test: /\.(jpe?g|gif|ttf|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'assets/[name].[ext]',
+          publicPath: '../',
+        },
+      }, {
+        test: /\.png$/,
+        loader: 'file-loader',
+        options: {
+          name: 'assets/[name].[ext]',
+        },
       },
-      common.module.rules[2],
     ],
   },
 };
