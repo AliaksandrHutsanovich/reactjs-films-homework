@@ -20,6 +20,7 @@ exports[`<MovieCardCover /> should render properly 1`] = `
     info="Some info"
     onClose={[Function]}
     onDialogOpen={[Function]}
+    onScrollInfo={[Function]}
     rating={5.5}
     title="Assasiens criesd"
   />

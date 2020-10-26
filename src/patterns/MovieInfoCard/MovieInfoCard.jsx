@@ -21,6 +21,7 @@ const MovieInfoCard = ({
   info,
   onClose,
   onDialogOpen,
+  onScrollInfo,
 }) => (
   <Card className={styles.card}>
     <Meta
@@ -39,7 +40,10 @@ const MovieInfoCard = ({
             titleFontType="white"
             renderTitle={renderTitle}
           />
-          <Layout className={styles.card__textWrapper}>
+          <Layout
+            className={styles.card__textWrapper}
+            onScroll={onScrollInfo}
+          >
             <Text type="white" size={12}>
               {info}
             </Text>
@@ -67,6 +71,7 @@ MovieInfoCard.propTypes = {
   onClose: PropTypes.func.isRequired,
   onDialogOpen: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
+  onScrollInfo: PropTypes.func.isRequired,
 };
 
 MovieInfoCard.defaultProps = {

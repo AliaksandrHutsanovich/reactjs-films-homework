@@ -13,6 +13,7 @@ const MovieCardCover = ({
   imgUrl,
   layoutClassName,
   onDialogOpen,
+  onScrollInfo,
 }) => (
   <Layout
     style={{
@@ -28,6 +29,7 @@ const MovieCardCover = ({
       info={info}
       onClose={onClose}
       onDialogOpen={onDialogOpen}
+      onScrollInfo={onScrollInfo}
     />
   </Layout>
 );
@@ -42,6 +44,7 @@ MovieCardCover.propTypes = {
   layoutClassName: PropTypes.string,
   onDialogOpen: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
+  onScrollInfo: PropTypes.func.isRequired,
 };
 
 MovieCardCover.defaultProps = {

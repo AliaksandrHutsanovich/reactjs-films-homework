@@ -43,5 +43,6 @@ export const cardExample = () => (
     info={info}
     onClose={action('the close icon was clicked')}
     onDialogOpen={action('the button for opening dialog was clicked')}
+    onScrollInfo={action('the content was scrolled')}
   />
 );

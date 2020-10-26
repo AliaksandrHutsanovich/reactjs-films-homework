@@ -16,6 +16,7 @@ describe('<MovieCardCover />', () => {
         imgUrl="//url"
         layoutClassName="class"
         onDialogOpen={() => {}}
+        onScrollInfo={() => {}}
       />,
     );
     const result = renderer.getRenderOutput();

@@ -12,7 +12,6 @@ import InfiniteScroll from 'react-infinite-scroller';
 import { Load } from '../../patterns';
 import {
   useDataRequest,
-  useItemsSelector,
   useSearchEntitiesSelector,
   useFilterByGenreEntitiesSelector,
   useTotalPagesSelector,
@@ -46,8 +45,6 @@ const MovieListContainer = ({ type }) => {
   const { items = [] } = useDataRequest(requestType, searchValue, page);
   const movies = usePreviousCash(items, page);
 
-  const genresById = useItemsSelector(REQUEST_TYPES.GENRES);
-
   const filteredMovies = useMemo(() => {
     if (filterGenreValue) {
       return movies.filter(
@@ -62,7 +59,7 @@ const MovieListContainer = ({ type }) => {
       key={item.id}
       id={item.id}
       title={item.title}
-      genres={item.genre_ids.map((itemId) => (genresById[itemId] ? genresById[itemId].name : ''))}
+      genresIds={item.genre_ids}
       rating={item.vote_average / 2}
       info={item.overview}
       imgUrl={item.backdrop_path ? `${IMG_PATH_PREFIX}${item.backdrop_path}` : image}

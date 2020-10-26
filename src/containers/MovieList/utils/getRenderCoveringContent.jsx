@@ -3,6 +3,10 @@ import { MovieCardCover } from '../../../patterns';
 
 import styles from '../MovieList.container.scss';
 
+const handleScrollToStopPropagation = (e) => {
+  e.stopPropagation();
+};
+
 const getRenderCoveringContent = (id, handleOpen) => (
   title,
   genres,
@@ -21,6 +25,7 @@ const getRenderCoveringContent = (id, handleOpen) => (
     imgUrl={imgUrl}
     layoutClassName={styles.coveringContentWrapper}
     onDialogOpen={() => { handleOpen({ isOpen: true, title, id }); }}
+    onScrollInfo={handleScrollToStopPropagation}
   />
 );
 

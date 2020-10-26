@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { REQUEST_TYPES } from '../../constants';
 import { MovieCard } from '../../patterns';
+import {
+  useItemsSelector,
+} from '../../hooks';
 
 const MovieCardContainer = ({
   title,
-  genres,
+  genresIds,
   rating,
   info,
   imgUrl,
@@ -15,10 +19,12 @@ const MovieCardContainer = ({
 }) => {
   const [isShown, showCover] = useState(false);
 
+  const genresById = useItemsSelector(REQUEST_TYPES.GENRES);
+
   return (
     <MovieCard
       title={title}
-      genres={genres}
+      genres={genresIds.map((itemId) => (genresById[itemId].name))}
       rating={rating}
       info={info}
       imgUrl={imgUrl}
@@ -34,8 +40,8 @@ const MovieCardContainer = ({
 
 MovieCardContainer.propTypes = {
   title: PropTypes.string.isRequired,
-  genres: PropTypes.arrayOf(
-    PropTypes.string,
+  genresIds: PropTypes.arrayOf(
+    PropTypes.number,
   ).isRequired,
   rating: PropTypes.oneOfType([
     PropTypes.string,

@@ -30,6 +30,7 @@ exports[`<MovieInfoCard /> cardExample should be rendered properly 1`] = `
         />
         <Layout
           className="card__textWrapper"
+          onScroll={[Function]}
         >
           <UNDEFINED
             size={12}
