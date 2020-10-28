@@ -21,7 +21,7 @@ const MovieCardContainer = ({
 
   const genresById = useItemsSelector(REQUEST_TYPES.GENRES);
 
-  return (
+  return Object.keys(genresById).length ? (
     <MovieCard
       title={title}
       genres={genresIds.map((itemId) => (genresById[itemId].name))}
@@ -35,7 +35,7 @@ const MovieCardContainer = ({
       onShowCover={showCover}
       id={id}
     />
-  );
+  ) : null;
 };
 
 MovieCardContainer.propTypes = {
