@@ -52,7 +52,12 @@ List.propTypes = {
   ).isRequired,
   grid: PropTypes.shape({
     gutter: PropTypes.number,
-    column: PropTypes.number.isRequired,
+    column: PropTypes.number,
+    xs: PropTypes.number,
+    sm: PropTypes.number,
+    md: PropTypes.number,
+    lg: PropTypes.number,
+    xl: PropTypes.number,
   }),
   renderItem: PropTypes.func,
   bordered: PropTypes.bool,

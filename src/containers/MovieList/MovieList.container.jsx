@@ -84,9 +84,7 @@ const MovieListContainer = ({ type }) => {
         initialLoad={false}
         className={styles.wrapper}
         pageStart={1}
-        loadMore={(part) => {
-          setPage(part);
-        }}
+        loadMore={setPage}
         hasMore={page !== totalPages}
         loader={(
           <div key={0} className={styles.loadingWrapper}>
@@ -119,7 +117,13 @@ const MovieListContainer = ({ type }) => {
               dataSource={filteredMovies}
               size="large"
               renderItem={renderCard}
-              grid={{ column: 4 }}
+              grid={{
+                xs: 1,
+                sm: 2,
+                md: 2,
+                lg: 3,
+                xl: 4,
+              }}
             />
           ) : renderScrolling()), [ // eslint-disable-line
           requestType,
