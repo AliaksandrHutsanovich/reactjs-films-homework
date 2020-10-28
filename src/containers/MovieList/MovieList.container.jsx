@@ -123,6 +123,7 @@ const MovieListContainer = ({ type }) => {
                 md: 2,
                 lg: 3,
                 xl: 4,
+                justify: 'center',
               }}
             />
           ) : renderScrolling()), [ // eslint-disable-line

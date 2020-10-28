@@ -38,6 +38,7 @@ const List = ({
     className={clsx({
       [styles.list]: itemAutoWidth,
       [styles[`itemMarginLeft_${itemMarginLeft}`]]: itemMarginLeft,
+      [styles[`justify_${grid?.justify}`]]: grid?.justify,
     })}
   />
 );
@@ -58,6 +59,11 @@ List.propTypes = {
     md: PropTypes.number,
     lg: PropTypes.number,
     xl: PropTypes.number,
+    justify: PropTypes.oneOf([
+      'flex-start',
+      'center',
+      'flex-end',
+    ]),
   }),
   renderItem: PropTypes.func,
   bordered: PropTypes.bool,
