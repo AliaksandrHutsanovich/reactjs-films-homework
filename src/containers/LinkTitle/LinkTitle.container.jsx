@@ -6,6 +6,8 @@ import { SCROLL_ID } from '../../constants';
 import { Text } from '../../components';
 import scrollView from '../../utils/scrollView';
 
+import styles from './LinkTitle.container.scss';
+
 const LinkTitle = ({
   id,
   title,
@@ -17,6 +19,7 @@ const LinkTitle = ({
     <Link
       to={`${url}${id}#${SCROLL_ID}`}
       scroll={scrollView}
+      className={styles.link}
     >
       <Text size={14} type={titleFontType} textOverflow strong>{title}</Text>
     </Link>
