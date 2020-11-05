@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
+import webpack from 'webpack';
 
 const htmlPlugin = new HtmlWebpackPlugin({
   template: './src/html/index.html',
@@ -9,9 +10,10 @@ const htmlPlugin = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: ['./src/index.jsx', 'webpack-hot-middleware/client?reload=true&timeout=2000'],
   plugins: [
     htmlPlugin,
+    new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),

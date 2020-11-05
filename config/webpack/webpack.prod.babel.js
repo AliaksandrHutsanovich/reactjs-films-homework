@@ -6,6 +6,7 @@ import common from './webpack.common';
 
 module.exports = {
   ...common,
+  entry: common.entry[0],
   mode: 'production',
   output: {
     path: path.resolve(__dirname, '../../build'),
