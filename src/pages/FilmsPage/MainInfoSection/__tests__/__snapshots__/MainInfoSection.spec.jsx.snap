@@ -76,6 +76,7 @@ exports[`<MainInfoSection /> should be rendered properly 1`] = `
         >
           <UNDEFINED
             size={12}
+            type="with_shadow"
           >
             This is info about movie
           </UNDEFINED>
