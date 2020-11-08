@@ -85,13 +85,12 @@
   justify-content: flex-end;
 }
 
-
-
 .textWrapper {
   width: 230px;
   height: auto;
   background-color: transparent !important;
-  margin-bottom: 20px;
+  position: absolute;
+  bottom: 70px;
 }
 
 .buttonsWrapper {

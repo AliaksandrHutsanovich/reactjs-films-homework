@@ -22,6 +22,7 @@ const MainInfoSection = ({
   isInfoShown,
   onShowInfo,
   onWatchNow,
+  typeInfoText,
 }) => (
   <>
     <div id={SCROLL_ID} />
@@ -55,12 +56,12 @@ const MainInfoSection = ({
           {useMemo(() => (
             isInfoShown && (
               <Layout className={styles.textWrapper}>
-                <Text type="with_shadow" size={12}>
+                <Text type={typeInfoText} size={12}>
                   {info}
                 </Text>
               </Layout>
             )
-          ), [isInfoShown, info])}
+          ), [isInfoShown, info, typeInfoText])}
           <Row className={styles.buttonsWrapper}>
             <Button
               title="Watch Now"
@@ -95,6 +96,10 @@ MainInfoSection.propTypes = {
   isInfoShown: PropTypes.bool.isRequired,
   onShowInfo: PropTypes.func.isRequired,
   onWatchNow: PropTypes.func.isRequired,
+  typeInfoText: PropTypes.oneOf([
+    'white_with_background',
+    'with_shadow',
+  ]).isRequired,
 };
 
 export default memo(MainInfoSection);

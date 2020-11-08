@@ -5,6 +5,7 @@ import React, {
   useState,
   useCallback,
 } from 'react';
+import { Grid } from 'antd';
 import { useParams } from 'react-router-dom';
 import { IMG_PATH_PREFIX } from '../../constants';
 import MainInfoSection from '../../pages/FilmsPage/MainInfoSection';
@@ -13,6 +14,8 @@ import { BackgroundContext } from '../../contexts';
 import MovieDialog from '../MovieDialog';
 
 import image from '../../assets/images/no-movie-poster.svg';
+
+const { useBreakpoint } = Grid;
 
 const MainInfoSectionContainer = () => {
   const [showInfo, setShowInfo] = useState(false);
@@ -23,6 +26,8 @@ const MainInfoSectionContainer = () => {
   const handleShowInfo = useCallback(() => {
     setShowInfo(!showInfo);
   }, [showInfo]);
+
+  const screens = useBreakpoint();
 
   useEffect(() => {
     if (item) {
@@ -52,6 +57,7 @@ const MainInfoSectionContainer = () => {
         isInfoShown={showInfo}
         onShowInfo={handleShowInfo}
         onWatchNow={handleOpenDialog}
+        typeInfoText={screens.xs ? 'white_with_background' : 'with_shadow'}
       />
     </>
   );
