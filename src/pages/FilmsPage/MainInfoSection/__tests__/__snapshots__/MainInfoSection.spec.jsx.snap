@@ -13,7 +13,9 @@ exports[`<MainInfoSection /> should be rendered properly 1`] = `
       }
     }
   >
-    <ForwardRef>
+    <ForwardRef
+      className="row"
+    >
       <ForwardRef
         className="rightCol"
         span={12}
