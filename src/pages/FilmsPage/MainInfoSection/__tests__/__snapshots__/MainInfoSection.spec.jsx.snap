@@ -17,7 +17,7 @@ exports[`<MainInfoSection /> should be rendered properly 1`] = `
       className="row"
     >
       <ForwardRef
-        className="rightCol"
+        className="leftCol"
         span={12}
       >
         <UNDEFINED
@@ -68,7 +68,7 @@ exports[`<MainInfoSection /> should be rendered properly 1`] = `
         />
       </ForwardRef>
       <ForwardRef
-        className="leftCol"
+        className="rightCol"
         span={12}
       >
         <Layout

@@ -33,7 +33,7 @@ const MainInfoSection = ({
       }}
     >
       <Row className={styles.row}>
-        <Col span={12} className={styles.rightCol}>
+        <Col span={12} className={styles.leftCol}>
           <HeadLine text={title} level={2} />
           <Row className={styles.infoWrapper}>
             <Col className={styles.listWrapper}>
@@ -52,7 +52,7 @@ const MainInfoSection = ({
           </Row>
           <RatingStar rating={rating} />
         </Col>
-        <Col span={12} className={styles.leftCol}>
+        <Col span={12} className={styles.rightCol}>
           {useMemo(() => (
             isInfoShown && (
               <Layout className={styles.textWrapper}>
