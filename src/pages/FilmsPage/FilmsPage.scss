@@ -60,6 +60,17 @@
   padding-bottom: 10px;
 }
 
+@media (max-width: 550px) {
+  .row {
+    flex-direction: column !important;
+  }
+
+  .rightCol, .leftCol {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
 .rightCol {
   display: flex !important;
   flex-direction: column;
@@ -73,6 +84,8 @@
   align-items: flex-end;
   justify-content: flex-end;
 }
+
+
 
 .textWrapper {
   width: 230px;

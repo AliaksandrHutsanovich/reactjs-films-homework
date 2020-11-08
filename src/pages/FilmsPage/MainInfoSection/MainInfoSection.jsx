@@ -31,7 +31,7 @@ const MainInfoSection = ({
         background: `url(${imgUrl}) no-repeat`,
       }}
     >
-      <Row>
+      <Row className={styles.row}>
         <Col span={12} className={styles.rightCol}>
           <HeadLine text={title} level={2} />
           <Row className={styles.infoWrapper}>
