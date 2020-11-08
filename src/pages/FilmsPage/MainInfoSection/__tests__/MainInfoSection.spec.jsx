@@ -16,6 +16,7 @@ describe('<MainInfoSection />', () => {
         isInfoShown
         onShowInfo={() => {}}
         onWatchNow={() => {}}
+        typeInfoText="with_shadow"
       />,
     );
     const result = renderer.getRenderOutput();
