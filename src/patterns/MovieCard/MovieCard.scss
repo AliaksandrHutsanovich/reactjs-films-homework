@@ -56,13 +56,14 @@ $imageHeight: 220;
 
 .coveringContentWrapper {
   position: absolute;
-  top: -#{$cardHeight + 20}px;
+  top: 0px;
+  transform: translate(0, -#{$cardHeight + 20}px);
   left: 0;
   width: #{$cardWidth}px;
   height: #{$cardHeight}px;
-  transition: top 1s ease-in;
+  transition: transform 1s ease-in;
 }
 
 .showCover {
-  top: 0px;
+  transform: translate(0, 0);
 }
