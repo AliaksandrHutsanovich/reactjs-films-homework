@@ -41,10 +41,7 @@ const MovieDialog = ({
     <Dialog
       title={title}
       visible={isOpen}
-      onCancel={() => {
-        onCancel();
-        setKey('');
-      }}
+      onCancel={onCancel}
     >
       <VideoPlayer
         width="100%"
