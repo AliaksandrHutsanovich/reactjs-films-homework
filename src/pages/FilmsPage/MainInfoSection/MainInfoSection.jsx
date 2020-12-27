@@ -10,6 +10,7 @@ import {
   Divider,
 } from '../../../components';
 import { RatingStar } from '../../../patterns';
+import transformTime from '../../../utils/transformTime';
 
 import styles from '../FilmsPage.scss';
 
@@ -23,6 +24,7 @@ const MainInfoSection = ({
   onShowInfo,
   onWatchNow,
   typeInfoText,
+  runtime,
 }) => (
   <>
     <div id={SCROLL_ID} />
@@ -47,7 +49,7 @@ const MainInfoSection = ({
             </Col>
             <Divider type="vertical" />
             <Text type="white" size={12}>
-              1h 46m
+              {transformTime(runtime)}
             </Text>
           </Row>
           <RatingStar rating={rating} />
@@ -100,6 +102,11 @@ MainInfoSection.propTypes = {
     'white_with_background',
     'with_shadow',
   ]).isRequired,
+  runtime: PropTypes.number,
+};
+
+MainInfoSection.defaultProps = {
+  runtime: null,
 };
 
 export default memo(MainInfoSection);

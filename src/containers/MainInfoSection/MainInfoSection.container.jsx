@@ -58,6 +58,7 @@ const MainInfoSectionContainer = () => {
         onShowInfo={handleShowInfo}
         onWatchNow={handleOpenDialog}
         typeInfoText={screens.xs ? 'white_with_background' : 'with_shadow'}
+        runtime={item.runtime}
       />
     </>
   );

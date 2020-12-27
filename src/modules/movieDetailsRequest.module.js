@@ -20,6 +20,7 @@ export const movieDetailsRequest = (movieId) => ({
     overview,
     vote_average: rating,
     title,
+    runtime,
   }) => ({
     [REQUEST_TYPES.SEARCH]: {
       [id]: {
@@ -29,6 +30,7 @@ export const movieDetailsRequest = (movieId) => ({
         overview,
         vote_average: rating,
         title,
+        runtime,
       },
     },
   }),
