@@ -17,6 +17,7 @@ describe('<MainInfoSection />', () => {
         onShowInfo={() => {}}
         onWatchNow={() => {}}
         typeInfoText="with_shadow"
+        runtime={15}
       />,
     );
     const result = renderer.getRenderOutput();

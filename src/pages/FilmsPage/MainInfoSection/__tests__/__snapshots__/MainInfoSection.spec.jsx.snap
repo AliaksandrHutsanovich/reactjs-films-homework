@@ -60,7 +60,7 @@ exports[`<MainInfoSection /> should be rendered properly 1`] = `
             size={12}
             type="white"
           >
-            1h 46m
+            15m
           </UNDEFINED>
         </ForwardRef>
         <UNDEFINED
