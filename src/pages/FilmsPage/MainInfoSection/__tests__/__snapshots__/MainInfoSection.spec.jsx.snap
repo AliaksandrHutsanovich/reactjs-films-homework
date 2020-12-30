@@ -73,6 +73,7 @@ exports[`<MainInfoSection /> should be rendered properly 1`] = `
       >
         <Layout
           className="textWrapper"
+          onScroll={[Function]}
         >
           <UNDEFINED
             size={12}

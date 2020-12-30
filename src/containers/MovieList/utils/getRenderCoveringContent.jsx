@@ -1,11 +1,8 @@
 import React from 'react';
 import { MovieCardCover } from '../../../patterns';
+import handleScrollToStopPropagation from '../../../utils/handlers';
 
 import styles from '../MovieList.container.scss';
-
-const handleScrollToStopPropagation = (e) => {
-  e.stopPropagation();
-};
 
 const getRenderCoveringContent = (id, handleOpen) => (
   title,

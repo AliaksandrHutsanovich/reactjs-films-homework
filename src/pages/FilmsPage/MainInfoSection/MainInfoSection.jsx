@@ -11,6 +11,7 @@ import {
 } from '../../../components';
 import { RatingStar } from '../../../patterns';
 import transformTime from '../../../utils/transformTime';
+import handleScrollToStopPropagation from '../../../utils/handlers';
 
 import styles from '../FilmsPage.scss';
 
@@ -57,7 +58,10 @@ const MainInfoSection = ({
         <Col span={12} className={styles.rightCol}>
           {useMemo(() => (
             isInfoShown && (
-              <Layout className={styles.textWrapper}>
+              <Layout
+                className={styles.textWrapper}
+                onScroll={handleScrollToStopPropagation}
+              >
                 <Text type={typeInfoText} size={12}>
                   {info}
                 </Text>
