@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import setValue from '../../utils/setValue';
 import { useVideosRequest } from '../../hooks';
 import { VideoPlayer, Dialog } from '../../components';
+import { NoTrailer } from '../../patterns';
 
 const MovieDialog = ({
   isOpen,
@@ -49,7 +50,7 @@ const MovieDialog = ({
       <VideoPlayer
         width="100%"
         height="300px"
-        iframe={useMemo(() => (key ? iframe : <div />), [iframe, key])}
+        iframe={useMemo(() => (key ? iframe : <NoTrailer />), [iframe, key])}
       />
     </Dialog>
   );

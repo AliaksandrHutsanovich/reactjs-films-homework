@@ -7,7 +7,13 @@ exports[`<Dialog /> dialogExample should be rendered properly 1`] = `
   maskTransitionName="fade"
   okType="primary"
   onCancel={[Function]}
-  title="Dialog example"
+  title={
+    <p
+      className="title"
+    >
+      Dialog example
+    </p>
+  }
   transitionName="zoom"
   visible={true}
   width="fit-content"

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NoTrailer /> noTrailer should be rendered properly 1`] = `
+<div
+  className="wrapper"
+>
+  <UNDEFINED
+    size={20}
+    type="white"
+  >
+    No Trailer
+  </UNDEFINED>
+</div>
+`;

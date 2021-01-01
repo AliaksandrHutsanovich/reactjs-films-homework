@@ -4,6 +4,8 @@ import { Modal } from 'antd';
 
 import '!style-loader!css-loader!sass-loader!antd/dist/antd.css'; //eslint-disable-line
 
+import styles from './Dialog.scss';
+
 const Dialog = ({
   title,
   visible,
@@ -11,7 +13,7 @@ const Dialog = ({
   children,
 }) => (
   <Modal
-    title={title}
+    title={<p className={styles.title}>{title}</p>}
     visible={visible}
     onCancel={onCancel}
     footer={null}

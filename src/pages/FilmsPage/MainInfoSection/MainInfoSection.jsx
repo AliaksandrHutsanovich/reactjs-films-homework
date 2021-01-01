@@ -92,7 +92,7 @@ MainInfoSection.propTypes = {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
     }),
-  ).isRequired,
+  ),
   rating: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
@@ -111,6 +111,7 @@ MainInfoSection.propTypes = {
 
 MainInfoSection.defaultProps = {
   runtime: null,
+  genres: [],
 };
 
 export default memo(MainInfoSection);

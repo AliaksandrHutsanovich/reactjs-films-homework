@@ -50,7 +50,7 @@ List.propTypes = {
       PropTypes.shape({}),
       PropTypes.node,
     ]),
-  ).isRequired,
+  ),
   grid: PropTypes.shape({
     gutter: PropTypes.number,
     column: PropTypes.number,
@@ -90,6 +90,7 @@ List.defaultProps = {
   size: 'default',
   itemAutoWidth: false,
   itemMarginLeft: null,
+  dataSource: [],
 };
 
 export default memo(List); // writting memozator is possible

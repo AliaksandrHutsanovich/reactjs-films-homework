@@ -6,3 +6,4 @@ export { default as Loading } from './Loading';
 export { default as MovieInfoCard } from './MovieInfoCard';
 export { default as MovieCardCover } from './MovieCardCover';
 export { default as Load } from './Load';
+export { default as NoTrailer } from './NoTrailer';
