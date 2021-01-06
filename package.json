@@ -24,7 +24,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
     "antd": "^4.4.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "clsx": "^1.1.1",
     "express": "^4.17.1",
     "framer-motion": "^2.3.0",
