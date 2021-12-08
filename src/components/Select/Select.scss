@@ -4,12 +4,31 @@
 }
 
 .select {
-  width: fit-content;
   color: #1890ff !important;
   font: 14px HelveticaNeue;
 
   span {
     opacity: 1;
+  }
+}
+
+.rightFilter {
+  @media (max-width: 330px) {
+    > div {
+      padding: 0 3px !important;
+
+      > span:nth-child(2) {
+        max-width: 58px;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  @media (min-width: 331px) and (max-width: 380px) {
+    > div > span:nth-child(2) {
+      max-width: 73px;
+      text-overflow: ellipsis;
+    }
   }
 }
 
@@ -21,6 +40,10 @@
 .option {
   color: #1890ff !important;
   width: fit-content;
+
+  @media (max-width: 360px) {
+    width: 100%;
+  }
 }
 
 .dropDown {
@@ -28,6 +51,11 @@
 
   > div > div:nth-child(2) > div > div {
     position: static !important;
+  }
+
+  @media (max-width: 360px) {
+    left: 0 !important;
+    right: 0 !important;
   }
 }
 

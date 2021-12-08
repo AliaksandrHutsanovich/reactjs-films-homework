@@ -16,6 +16,7 @@ const FilterContainer = () => {
         allowClear
         onSelect={handleSelect}
         options={genres}
+        isTabsFilter
       />
     </Layout>
   );

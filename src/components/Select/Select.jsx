@@ -2,6 +2,7 @@ import React, { memo, useMemo } from 'react';
 import { Select as AntSelect } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 
 import '!style-loader!css-loader!sass-loader!antd/dist/antd.css'; //eslint-disable-line
 import styles from './Select.scss';
@@ -29,6 +30,7 @@ const Select = ({
   options,
   renderOption,
   disabled,
+  isTabsFilter,
 }) => (
   <AntSelect
     placeholder={placeholder}
@@ -36,7 +38,7 @@ const Select = ({
     allowClear={allowClear}
     suffixIcon={arrowIcon}
     onSelect={onSelect}
-    className={styles.select}
+    className={clsx(styles.select, { [styles.rightFilter]: isTabsFilter })}
     dropdownClassName={styles.dropDown}
     disabled={disabled}
     onChange={onSelect}
@@ -67,6 +69,7 @@ Select.propTypes = {
   ).isRequired,
   renderOption: PropTypes.func,
   disabled: PropTypes.bool,
+  isTabsFilter: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -75,6 +78,7 @@ Select.defaultProps = {
   arrowIcon: defaultArrowIcon,
   renderOption: defaultRenderOption,
   disabled: false,
+  isTabsFilter: false,
 };
 
 export default memo(Select);
